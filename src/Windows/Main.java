@@ -37,6 +37,7 @@ public class Main extends javax.swing.JFrame {
         lbl_peonNegro.setIcon(imageIcon6);
         ImageIcon imageIcon7 = new ImageIcon(new ImageIcon("reinanegroicono.png").getImage().getScaledInstance(78, 141, Image.SCALE_DEFAULT));
         lbl_reinaNegro.setIcon(imageIcon7);
+//        laksdklasd
 
     }
 
