@@ -141,6 +141,10 @@ public class Main extends javax.swing.JFrame {
         f1 = new javax.swing.JLabel();
         g1 = new javax.swing.JLabel();
         h1 = new javax.swing.JLabel();
+        btn_clear = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txta_movimiento = new javax.swing.JTextArea();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -776,6 +780,27 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(h1);
         h1.setBounds(940, 640, 88, 66);
 
+        btn_clear.setText("Clear Chest Oracle");
+        btn_clear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_clearMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btn_clear);
+        btn_clear.setBounds(1180, 680, 140, 30);
+
+        txta_movimiento.setColumns(20);
+        txta_movimiento.setRows(5);
+        txta_movimiento.setEnabled(false);
+        jScrollPane1.setViewportView(txta_movimiento);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(1060, 100, 260, 200);
+
+        jLabel12.setText("MOVIMIENTOS");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(1060, 80, 90, 14);
+
         setBounds(0, 0, 1341, 761);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -867,6 +892,157 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lbl_reinaNegroMouseClicked
 
+    private void btn_clearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_clearMouseClicked
+        // TODO add your handling code here:
+        //////// limpiar todo la A
+        a8.setIcon(null);
+        a8.revalidate();
+        a7.setIcon(null);
+        a7.revalidate();
+        a6.setIcon(null);
+        a6.revalidate();
+        a5.setIcon(null);
+        a5.revalidate();
+        a4.setIcon(null);
+        a4.revalidate();
+        a3.setIcon(null);
+        a3.revalidate();
+        a2.setIcon(null);
+        a2.revalidate();
+        a1.setIcon(null);
+        a1.revalidate();
+        ///////////// limpiar toda la B
+        b8.setIcon(null);
+        b8.revalidate();
+        b7.setIcon(null);
+        b7.revalidate();
+        b6.setIcon(null);
+        b6.revalidate();
+        b5.setIcon(null);
+        b5.revalidate();
+        b4.setIcon(null);
+        b4.revalidate();
+        b3.setIcon(null);
+        b3.revalidate();
+        b2.setIcon(null);
+        b2.revalidate();
+        b1.setIcon(null);
+        b1.revalidate();
+        //////////////// limpiar toda la C
+        c8.setIcon(null);
+        c8.revalidate();
+        c7.setIcon(null);
+        c7.revalidate();
+        c6.setIcon(null);
+        c6.revalidate();
+        c5.setIcon(null);
+        c5.revalidate();
+        c4.setIcon(null);
+        c4.revalidate();
+        c3.setIcon(null);
+        c3.revalidate();
+        c2.setIcon(null);
+        c2.revalidate();
+        c1.setIcon(null);
+        c1.revalidate();
+        /////////////// limpiar toda la D
+        d8.setIcon(null);
+        d8.revalidate();
+        d7.setIcon(null);
+        d7.revalidate();
+        d6.setIcon(null);
+        d6.revalidate();
+        d5.setIcon(null);
+        d5.revalidate();
+        d4.setIcon(null);
+        d4.revalidate();
+        d3.setIcon(null);
+        d3.revalidate();
+        d2.setIcon(null);
+        d2.revalidate();
+        d1.setIcon(null);
+        d1.revalidate();
+        /////////////limpiar toda la E
+        e8.setIcon(null);
+        e8.revalidate();
+        e7.setIcon(null);
+        e7.revalidate();
+        e6.setIcon(null);
+        e6.revalidate();
+        e5.setIcon(null);
+        e5.revalidate();
+        e4.setIcon(null);
+        e4.revalidate();
+        e3.setIcon(null);
+        e3.revalidate();
+        e2.setIcon(null);
+        e2.revalidate();
+        e1.setIcon(null);
+        e1.revalidate();
+        /////////// limpiar toda la F
+        f8.setIcon(null);
+        f8.revalidate();
+        f7.setIcon(null);
+        f7.revalidate();
+        f6.setIcon(null);
+        f6.revalidate();
+        f5.setIcon(null);
+        f5.revalidate();
+        f4.setIcon(null);
+        f4.revalidate();
+        f3.setIcon(null);
+        f3.revalidate();
+        f2.setIcon(null);
+        f2.revalidate();
+        f1.setIcon(null);
+        f1.revalidate();
+        /////////// limpiar toda la G
+        g8.setIcon(null);
+        g8.revalidate();
+        g7.setIcon(null);
+        g7.revalidate();
+        g6.setIcon(null);
+        g6.revalidate();
+        g5.setIcon(null);
+        g5.revalidate();
+        g4.setIcon(null);
+        g4.revalidate();
+        g3.setIcon(null);
+        g3.revalidate();
+        g2.setIcon(null);
+        g2.revalidate();
+        g1.setIcon(null);
+        g1.revalidate();
+        ////////////// limpiar toda la H
+        h8.setIcon(null);
+        h8.revalidate();
+        h7.setIcon(null);
+        h7.revalidate();
+        h6.setIcon(null);
+        h6.revalidate();
+        h5.setIcon(null);
+        h5.revalidate();
+        h4.setIcon(null);
+        h4.revalidate();
+        h3.setIcon(null);
+        h3.revalidate();
+        h2.setIcon(null);
+        h2.revalidate();
+        h1.setIcon(null);
+        h1.revalidate();
+        //////////// limpiar variables globales
+        cont_caballoBlanco = 0;
+        cont_reyBlanco = 0;
+        cont_peonBlanco = 0;
+        cont_reinaBlanco = 0;
+        cont_caballoNegro = 0;
+        cont_reyNegro = 0;
+        cont_peonNegro = 0;
+        cont_reinaNegro = 0;
+        ///////////// limpiar la text area
+        txta_movimiento.setText("");
+    }//GEN-LAST:event_btn_clearMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -881,16 +1057,21 @@ public class Main extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -919,6 +1100,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel b6;
     private javax.swing.JLabel b7;
     private javax.swing.JLabel b8;
+    private javax.swing.JButton btn_clear;
     private javax.swing.JLabel c1;
     private javax.swing.JLabel c2;
     private javax.swing.JLabel c3;
@@ -970,6 +1152,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -985,6 +1168,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbl_caballoBlanco;
     private javax.swing.JLabel lbl_caballoNegro;
@@ -994,8 +1178,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_reinaNegro;
     private javax.swing.JLabel lbl_reyBlanco;
     private javax.swing.JLabel lbl_reyNegro;
+    private javax.swing.JTextArea txta_movimiento;
     // End of variables declaration//GEN-END:variables
-private int cont_caballoBlanco = 0;
+    private int cont_caballoBlanco = 0;
     private int cont_reyBlanco = 0;
     private int cont_peonBlanco = 0;
     private int cont_reinaBlanco = 0;
