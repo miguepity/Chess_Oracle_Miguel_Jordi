@@ -147,6 +147,11 @@ public class Main extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -343,6 +348,11 @@ public class Main extends javax.swing.JFrame {
         a1.setForeground(new java.awt.Color(153, 0, 153));
         a1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a1.setOpaque(true);
+        a1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                a1MouseClicked(evt);
+            }
+        });
         getContentPane().add(a1);
         a1.setBounds(240, 80, 88, 66);
 
@@ -809,9 +819,10 @@ public class Main extends javax.swing.JFrame {
         if (cont_caballoBlanco < 2) {
             lbl_caballoBlanco.setOpaque(true);
             lbl_caballoBlanco.setBackground(Color.red);
-            cont_caballoBlanco++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de dos (2) Caballos");
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
         }
     }//GEN-LAST:event_lbl_caballoBlancoMouseClicked
 
@@ -823,6 +834,8 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de un (1) Rey!!");
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
         }
     }//GEN-LAST:event_lbl_reyBlancoMouseClicked
 
@@ -834,6 +847,8 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de ocho (8) Peones!!");
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
         }
     }//GEN-LAST:event_lbl_peonBlancoMouseClicked
 
@@ -845,6 +860,8 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de una (1) Reina !!");
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
         }
     }//GEN-LAST:event_lbl_reinaBlancoMouseClicked
 
@@ -856,6 +873,8 @@ public class Main extends javax.swing.JFrame {
             cont_caballoNegro++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de dos (2) Caballos");
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
         }
     }//GEN-LAST:event_lbl_caballoNegroMouseClicked
 
@@ -867,6 +886,8 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de un (1) Rey!!");
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
         }
     }//GEN-LAST:event_lbl_reyNegroMouseClicked
 
@@ -878,6 +899,8 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de ocho (8) Peones!!");
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
         }
     }//GEN-LAST:event_lbl_peonNegroMouseClicked
 
@@ -889,6 +912,8 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de una (1) Reina!!");
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
         }
     }//GEN-LAST:event_lbl_reinaNegroMouseClicked
 
@@ -1042,6 +1067,47 @@ public class Main extends javax.swing.JFrame {
         ///////////// limpiar la text area
         txta_movimiento.setText("");
     }//GEN-LAST:event_btn_clearMouseClicked
+
+    private void a1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a1MouseClicked
+        // TODO add your handling code here:
+        if (lbl_caballoBlanco.isOpaque()) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+        }else if(lbl_reyBlanco.isOpaque()){
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+        }else if(lbl_peonBlanco.isOpaque()){
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+        }else if(lbl_reinaBlanco.isOpaque()){
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+        }else if (lbl_caballoNegro.isOpaque()){
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoNegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+        }
+    }//GEN-LAST:event_a1MouseClicked
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setOpaque(false);
+        lbl_caballoBlanco.setBackground(Color.gray);
+    }//GEN-LAST:event_formMouseClicked
 
     /**
      * @param args the command line arguments
