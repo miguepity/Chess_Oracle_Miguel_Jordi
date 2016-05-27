@@ -344,7 +344,7 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(a2);
         a2.setBounds(240, 160, 88, 66);
 
-        a1.setBackground(new java.awt.Color(0, 0, 0));
+        a1.setBackground(new java.awt.Color(0, 204, 204));
         a1.setForeground(new java.awt.Color(153, 0, 153));
         a1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a1.setOpaque(true);
