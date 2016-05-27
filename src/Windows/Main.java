@@ -820,7 +820,7 @@ public class Main extends javax.swing.JFrame {
             lbl_caballoBlanco.setOpaque(true);
             lbl_caballoBlanco.setBackground(Color.red);
         } else {
-            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de dos (2) Caballos");
+            JOptionPane.showMessageDialog(null, "No se puede agregar mas de dos (2) Caballos");
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
         }
@@ -833,7 +833,7 @@ public class Main extends javax.swing.JFrame {
             lbl_reyBlanco.setBackground(Color.red);
             cont_reyBlanco++;
         } else {
-            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de un (1) Rey!!");
+            JOptionPane.showMessageDialog(null, "No se puede agregar mas de un (1) Rey!!");
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
         }
@@ -846,7 +846,7 @@ public class Main extends javax.swing.JFrame {
             lbl_peonBlanco.setBackground(Color.red);
             cont_peonBlanco++;
         } else {
-            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de ocho (8) Peones!!");
+            JOptionPane.showMessageDialog(null, "No se puede agregar mas de ocho (8) Peones!!");
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
         }
@@ -859,7 +859,7 @@ public class Main extends javax.swing.JFrame {
             lbl_reinaBlanco.setBackground(Color.red);
             cont_reinaBlanco++;
         } else {
-            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de una (1) Reina !!");
+            JOptionPane.showMessageDialog(null, "No se puede agregar mas de una (1) Reina !!");
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
         }
@@ -872,7 +872,7 @@ public class Main extends javax.swing.JFrame {
             lbl_caballoNegro.setBackground(Color.red);
             cont_caballoNegro++;
         } else {
-            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de dos (2) Caballos");
+            JOptionPane.showMessageDialog(null, "No se puede agregar mas de dos (2) Caballos");
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
         }
@@ -885,7 +885,7 @@ public class Main extends javax.swing.JFrame {
             lbl_reyNegro.setBackground(Color.red);
             cont_reyNegro++;
         } else {
-            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de un (1) Rey!!");
+            JOptionPane.showMessageDialog(null, "No se puede agregar mas de un (1) Rey!!");
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
         }
@@ -898,7 +898,7 @@ public class Main extends javax.swing.JFrame {
             lbl_peonNegro.setBackground(Color.red);
             cont_peonNegro++;
         } else {
-            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de ocho (8) Peones!!");
+            JOptionPane.showMessageDialog(null, "No se puede agregar mas de ocho (8) Peones!!");
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
         }
@@ -911,7 +911,7 @@ public class Main extends javax.swing.JFrame {
             lbl_reinaNegro.setBackground(Color.red);
             cont_reinaNegro++;
         } else {
-            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de una (1) Reina!!");
+            JOptionPane.showMessageDialog(null, "No se puede agregar mas de una (1) Reina!!");
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
         }
