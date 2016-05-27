@@ -867,4 +867,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_reyBlanco;
     private javax.swing.JLabel lbl_reyNegro;
     // End of variables declaration//GEN-END:variables
+private int cont_caballoBlanco = 0;
+private int cont_reyBlanco = 0;
+private int cont_peonBlanco = 0;    
+private int cont_reinaBlanco = 0;
+private int cont_caballoNegro = 0;
+private int cont_reyNegro = 0;
+private int cont_peonNegro = 0;
+private int cont_reinaNegro = 0;
 }
