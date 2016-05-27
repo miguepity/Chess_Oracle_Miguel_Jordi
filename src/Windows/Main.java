@@ -831,7 +831,6 @@ public class Main extends javax.swing.JFrame {
         if (cont_reyBlanco < 1) {
             lbl_reyBlanco.setOpaque(true);
             lbl_reyBlanco.setBackground(Color.red);
-            cont_reyBlanco++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de un (1) Rey!!");
             lbl_reyBlanco.setOpaque(false);
@@ -844,7 +843,6 @@ public class Main extends javax.swing.JFrame {
         if (cont_peonBlanco < 8) {
             lbl_peonBlanco.setOpaque(true);
             lbl_peonBlanco.setBackground(Color.red);
-            cont_peonBlanco++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de ocho (8) Peones!!");
             lbl_peonBlanco.setOpaque(false);
@@ -857,7 +855,6 @@ public class Main extends javax.swing.JFrame {
         if (cont_reinaBlanco < 1) {
             lbl_reinaBlanco.setOpaque(true);
             lbl_reinaBlanco.setBackground(Color.red);
-            cont_reinaBlanco++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de una (1) Reina !!");
             lbl_reinaBlanco.setOpaque(false);
@@ -870,7 +867,6 @@ public class Main extends javax.swing.JFrame {
         if (cont_caballoNegro < 2) {
             lbl_caballoNegro.setOpaque(true);
             lbl_caballoNegro.setBackground(Color.red);
-            cont_caballoNegro++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de dos (2) Caballos");
             lbl_caballoNegro.setOpaque(false);
@@ -883,7 +879,6 @@ public class Main extends javax.swing.JFrame {
         if (cont_reyNegro < 1) {
             lbl_reyNegro.setOpaque(true);
             lbl_reyNegro.setBackground(Color.red);
-            cont_reyNegro++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de un (1) Rey!!");
             lbl_reyNegro.setOpaque(false);
@@ -896,7 +891,6 @@ public class Main extends javax.swing.JFrame {
         if (cont_peonNegro < 8) {
             lbl_peonNegro.setOpaque(true);
             lbl_peonNegro.setBackground(Color.red);
-            cont_peonNegro++;
         } else {
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de ocho (8) Peones!!");
             lbl_peonNegro.setOpaque(false);
@@ -909,8 +903,7 @@ public class Main extends javax.swing.JFrame {
         if (cont_reinaNegro < 1) {
             lbl_reinaNegro.setOpaque(true);
             lbl_reinaNegro.setBackground(Color.red);
-            cont_reinaNegro++;
-        } else {
+        }else{
             JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de una (1) Reina!!");
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
@@ -1089,11 +1082,11 @@ public class Main extends javax.swing.JFrame {
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
         }else if(lbl_reinaBlanco.isOpaque()){
-            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
-            cont_reyBlanco++;
+            cont_reinaBlanco++;
         }else if (lbl_caballoNegro.isOpaque()){
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
@@ -1113,7 +1106,7 @@ public class Main extends javax.swing.JFrame {
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
         }else if(lbl_reinaNegro.isOpaque()){
-            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
