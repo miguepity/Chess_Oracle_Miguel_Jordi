@@ -1095,11 +1095,29 @@ public class Main extends javax.swing.JFrame {
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
         }else if (lbl_caballoNegro.isOpaque()){
-            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoNegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
+        }else if(lbl_reyNegro.isOpaque()){
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+        }else if(lbl_peonNegro.isOpaque()){
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+        }else if(lbl_reinaNegro.isOpaque()){
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
         }
     }//GEN-LAST:event_a1MouseClicked
 
