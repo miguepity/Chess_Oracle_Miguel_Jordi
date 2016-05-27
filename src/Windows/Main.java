@@ -346,6 +346,7 @@ public class Main extends javax.swing.JFrame {
 
         a1.setBackground(new java.awt.Color(0, 0, 0));
         a1.setForeground(new java.awt.Color(153, 0, 153));
+        a1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a1.setOpaque(true);
         a1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1071,35 +1072,61 @@ public class Main extends javax.swing.JFrame {
     private void a1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a1MouseClicked
         // TODO add your handling code here:
         if (lbl_caballoBlanco.isOpaque()) {
+            a1.setBackground(Color.red);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
         }else if(lbl_reyBlanco.isOpaque()){
+            a1.setBackground(Color.red);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
-            lbl_reyBlanco.setBackground(Color.gray);
+            lbl_reyBlanco.setBackground(Color.gray);            
             cont_reyBlanco++;
         }else if(lbl_peonBlanco.isOpaque()){
+            a1.setBackground(Color.red);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
         }else if(lbl_reinaBlanco.isOpaque()){
-            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setBackground(Color.red);
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
         }else if (lbl_caballoNegro.isOpaque()){
+            a1.setBackground(Color.GRAY);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoNegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
+        }else if(lbl_peonNegro.isOpaque()){
+            a1.setBackground(Color.GRAY);
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+        }else if(lbl_reyNegro.isOpaque()){
+            a1.setBackground(Color.GRAY);
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+        }else if(lbl_reinaNegro.isOpaque()){
+            a1.setBackground(Color.GRAY);
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
         }
     }//GEN-LAST:event_a1MouseClicked
 
