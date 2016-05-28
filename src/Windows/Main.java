@@ -338,14 +338,20 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(lbl_peonNegro);
         lbl_peonNegro.setBounds(10, 540, 78, 141);
 
-        a2.setBackground(new java.awt.Color(255, 255, 255));
+        a2.setBackground(new java.awt.Color(255, 102, 51));
         a2.setForeground(new java.awt.Color(153, 0, 153));
+        a2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a2.setOpaque(true);
+        a2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                a2MouseClicked(evt);
+            }
+        });
         getContentPane().add(a2);
         a2.setBounds(240, 160, 88, 66);
 
-        a1.setBackground(new java.awt.Color(0, 204, 204));
+        a1.setBackground(new java.awt.Color(153, 0, 0));
         a1.setForeground(new java.awt.Color(153, 0, 153));
         a1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -358,435 +364,647 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(a1);
         a1.setBounds(240, 80, 88, 66);
 
-        a4.setBackground(new java.awt.Color(255, 255, 255));
+        a4.setBackground(new java.awt.Color(255, 102, 51));
         a4.setForeground(new java.awt.Color(153, 0, 153));
+        a4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a4.setOpaque(true);
+        a4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                a4MouseClicked(evt);
+            }
+        });
         getContentPane().add(a4);
         a4.setBounds(240, 320, 88, 66);
 
-        a3.setBackground(new java.awt.Color(0, 0, 0));
+        a3.setBackground(new java.awt.Color(153, 0, 0));
         a3.setForeground(new java.awt.Color(153, 0, 153));
+        a3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a3.setOpaque(true);
+        a3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                a3MouseClicked(evt);
+            }
+        });
         getContentPane().add(a3);
         a3.setBounds(240, 240, 88, 66);
 
-        a6.setBackground(new java.awt.Color(255, 255, 255));
+        a6.setBackground(new java.awt.Color(255, 102, 51));
         a6.setForeground(new java.awt.Color(153, 0, 153));
+        a6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a6.setOpaque(true);
+        a6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                a6MouseClicked(evt);
+            }
+        });
         getContentPane().add(a6);
         a6.setBounds(240, 480, 88, 66);
 
-        a5.setBackground(new java.awt.Color(0, 0, 0));
+        a5.setBackground(new java.awt.Color(153, 0, 0));
         a5.setForeground(new java.awt.Color(153, 0, 153));
+        a5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a5.setOpaque(true);
+        a5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                a5MouseClicked(evt);
+            }
+        });
         getContentPane().add(a5);
         a5.setBounds(240, 400, 88, 66);
 
-        a8.setBackground(new java.awt.Color(255, 255, 255));
+        a8.setBackground(new java.awt.Color(255, 102, 51));
         a8.setForeground(new java.awt.Color(153, 0, 153));
+        a8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a8.setOpaque(true);
+        a8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                a8MouseClicked(evt);
+            }
+        });
         getContentPane().add(a8);
         a8.setBounds(240, 640, 88, 66);
 
-        a7.setBackground(new java.awt.Color(0, 0, 0));
+        a7.setBackground(new java.awt.Color(153, 0, 0));
         a7.setForeground(new java.awt.Color(153, 0, 153));
+        a7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         a7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         a7.setOpaque(true);
+        a7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                a7MouseClicked(evt);
+            }
+        });
         getContentPane().add(a7);
         a7.setBounds(240, 560, 88, 66);
 
-        b8.setBackground(new java.awt.Color(0, 0, 0));
+        b8.setBackground(new java.awt.Color(153, 0, 0));
         b8.setForeground(new java.awt.Color(153, 0, 153));
+        b8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         b8.setOpaque(true);
+        b8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b8MouseClicked(evt);
+            }
+        });
         getContentPane().add(b8);
         b8.setBounds(340, 640, 88, 66);
 
-        b7.setBackground(new java.awt.Color(255, 255, 255));
+        b7.setBackground(new java.awt.Color(255, 102, 51));
         b7.setForeground(new java.awt.Color(153, 0, 153));
+        b7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         b7.setOpaque(true);
+        b7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b7MouseClicked(evt);
+            }
+        });
         getContentPane().add(b7);
         b7.setBounds(340, 560, 88, 66);
 
-        b6.setBackground(new java.awt.Color(0, 0, 0));
+        b6.setBackground(new java.awt.Color(153, 0, 0));
         b6.setForeground(new java.awt.Color(153, 0, 153));
+        b6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         b6.setOpaque(true);
+        b6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b6MouseClicked(evt);
+            }
+        });
         getContentPane().add(b6);
         b6.setBounds(340, 480, 88, 66);
 
-        b5.setBackground(new java.awt.Color(255, 255, 255));
+        b5.setBackground(new java.awt.Color(255, 102, 51));
         b5.setForeground(new java.awt.Color(153, 0, 153));
+        b5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         b5.setOpaque(true);
+        b5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b5MouseClicked(evt);
+            }
+        });
         getContentPane().add(b5);
         b5.setBounds(340, 400, 88, 66);
 
-        b4.setBackground(new java.awt.Color(0, 0, 0));
+        b4.setBackground(new java.awt.Color(153, 0, 0));
         b4.setForeground(new java.awt.Color(153, 0, 153));
+        b4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         b4.setOpaque(true);
+        b4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b4MouseClicked(evt);
+            }
+        });
         getContentPane().add(b4);
         b4.setBounds(340, 320, 88, 66);
 
-        b3.setBackground(new java.awt.Color(255, 255, 255));
+        b3.setBackground(new java.awt.Color(255, 102, 51));
         b3.setForeground(new java.awt.Color(153, 0, 153));
+        b3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         b3.setOpaque(true);
+        b3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b3MouseClicked(evt);
+            }
+        });
         getContentPane().add(b3);
         b3.setBounds(340, 240, 88, 66);
 
-        b2.setBackground(new java.awt.Color(0, 0, 0));
+        b2.setBackground(new java.awt.Color(153, 0, 0));
         b2.setForeground(new java.awt.Color(153, 0, 153));
+        b2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         b2.setOpaque(true);
+        b2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b2MouseClicked(evt);
+            }
+        });
         getContentPane().add(b2);
         b2.setBounds(340, 160, 88, 66);
 
-        b1.setBackground(new java.awt.Color(255, 255, 255));
+        b1.setBackground(new java.awt.Color(255, 102, 51));
         b1.setForeground(new java.awt.Color(153, 0, 153));
+        b1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         b1.setOpaque(true);
+        b1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b1MouseClicked(evt);
+            }
+        });
         getContentPane().add(b1);
         b1.setBounds(340, 80, 88, 66);
 
-        c8.setBackground(new java.awt.Color(255, 255, 255));
+        c8.setBackground(new java.awt.Color(255, 102, 51));
         c8.setForeground(new java.awt.Color(153, 0, 153));
+        c8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         c8.setOpaque(true);
+        c8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c8MouseClicked(evt);
+            }
+        });
         getContentPane().add(c8);
         c8.setBounds(440, 640, 88, 66);
 
-        c7.setBackground(new java.awt.Color(0, 0, 0));
+        c7.setBackground(new java.awt.Color(153, 0, 0));
         c7.setForeground(new java.awt.Color(153, 0, 153));
+        c7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         c7.setOpaque(true);
+        c7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c7MouseClicked(evt);
+            }
+        });
         getContentPane().add(c7);
         c7.setBounds(440, 560, 88, 66);
 
-        c6.setBackground(new java.awt.Color(255, 255, 255));
+        c6.setBackground(new java.awt.Color(255, 102, 51));
         c6.setForeground(new java.awt.Color(153, 0, 153));
+        c6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         c6.setOpaque(true);
+        c6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c6MouseClicked(evt);
+            }
+        });
         getContentPane().add(c6);
         c6.setBounds(440, 480, 88, 66);
 
-        c5.setBackground(new java.awt.Color(0, 0, 0));
+        c5.setBackground(new java.awt.Color(153, 0, 0));
         c5.setForeground(new java.awt.Color(153, 0, 153));
+        c5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         c5.setOpaque(true);
+        c5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c5MouseClicked(evt);
+            }
+        });
         getContentPane().add(c5);
         c5.setBounds(440, 400, 88, 66);
 
-        c4.setBackground(new java.awt.Color(255, 255, 255));
+        c4.setBackground(new java.awt.Color(255, 102, 51));
         c4.setForeground(new java.awt.Color(153, 0, 153));
+        c4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         c4.setOpaque(true);
+        c4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c4MouseClicked(evt);
+            }
+        });
         getContentPane().add(c4);
         c4.setBounds(440, 320, 88, 66);
 
-        c3.setBackground(new java.awt.Color(0, 0, 0));
+        c3.setBackground(new java.awt.Color(153, 0, 0));
         c3.setForeground(new java.awt.Color(153, 0, 153));
+        c3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         c3.setOpaque(true);
+        c3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c3MouseClicked(evt);
+            }
+        });
         getContentPane().add(c3);
         c3.setBounds(440, 240, 88, 66);
 
-        c2.setBackground(new java.awt.Color(255, 255, 255));
+        c2.setBackground(new java.awt.Color(255, 102, 51));
         c2.setForeground(new java.awt.Color(153, 0, 153));
+        c2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         c2.setOpaque(true);
+        c2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c2MouseClicked(evt);
+            }
+        });
         getContentPane().add(c2);
         c2.setBounds(440, 160, 88, 66);
 
-        c1.setBackground(new java.awt.Color(0, 0, 0));
+        c1.setBackground(new java.awt.Color(153, 0, 0));
         c1.setForeground(new java.awt.Color(153, 0, 153));
+        c1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         c1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         c1.setOpaque(true);
+        c1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c1MouseClicked(evt);
+            }
+        });
         getContentPane().add(c1);
         c1.setBounds(440, 80, 88, 66);
 
-        d7.setBackground(new java.awt.Color(255, 255, 255));
+        d7.setBackground(new java.awt.Color(255, 102, 51));
         d7.setForeground(new java.awt.Color(153, 0, 153));
+        d7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         d7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         d7.setOpaque(true);
+        d7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                d7MouseClicked(evt);
+            }
+        });
         getContentPane().add(d7);
         d7.setBounds(540, 560, 88, 66);
 
-        d6.setBackground(new java.awt.Color(0, 0, 0));
+        d6.setBackground(new java.awt.Color(153, 0, 0));
         d6.setForeground(new java.awt.Color(153, 0, 153));
+        d6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         d6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         d6.setOpaque(true);
+        d6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                d6MouseClicked(evt);
+            }
+        });
         getContentPane().add(d6);
         d6.setBounds(540, 480, 88, 66);
 
-        d5.setBackground(new java.awt.Color(255, 255, 255));
+        d5.setBackground(new java.awt.Color(255, 102, 51));
         d5.setForeground(new java.awt.Color(153, 0, 153));
+        d5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         d5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         d5.setOpaque(true);
+        d5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                d5MouseClicked(evt);
+            }
+        });
         getContentPane().add(d5);
         d5.setBounds(540, 400, 88, 66);
 
-        d4.setBackground(new java.awt.Color(0, 0, 0));
+        d4.setBackground(new java.awt.Color(153, 0, 0));
         d4.setForeground(new java.awt.Color(153, 0, 153));
+        d4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         d4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         d4.setOpaque(true);
+        d4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                d4MouseClicked(evt);
+            }
+        });
         getContentPane().add(d4);
         d4.setBounds(540, 320, 88, 66);
 
-        d3.setBackground(new java.awt.Color(255, 255, 255));
+        d3.setBackground(new java.awt.Color(255, 102, 51));
         d3.setForeground(new java.awt.Color(153, 0, 153));
+        d3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         d3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         d3.setOpaque(true);
+        d3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                d3MouseClicked(evt);
+            }
+        });
         getContentPane().add(d3);
         d3.setBounds(540, 240, 88, 66);
 
-        d2.setBackground(new java.awt.Color(0, 0, 0));
+        d2.setBackground(new java.awt.Color(153, 0, 0));
         d2.setForeground(new java.awt.Color(153, 0, 153));
+        d2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         d2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         d2.setOpaque(true);
+        d2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                d2MouseClicked(evt);
+            }
+        });
         getContentPane().add(d2);
         d2.setBounds(540, 160, 88, 66);
 
-        d1.setBackground(new java.awt.Color(255, 255, 255));
+        d1.setBackground(new java.awt.Color(255, 102, 51));
         d1.setForeground(new java.awt.Color(153, 0, 153));
+        d1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         d1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         d1.setOpaque(true);
+        d1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                d1MouseClicked(evt);
+            }
+        });
         getContentPane().add(d1);
         d1.setBounds(540, 80, 88, 66);
 
-        d8.setBackground(new java.awt.Color(0, 0, 0));
+        d8.setBackground(new java.awt.Color(153, 0, 0));
         d8.setForeground(new java.awt.Color(153, 0, 153));
+        d8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         d8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         d8.setOpaque(true);
+        d8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                d8MouseClicked(evt);
+            }
+        });
         getContentPane().add(d8);
         d8.setBounds(540, 640, 88, 66);
 
-        e2.setBackground(new java.awt.Color(255, 255, 255));
+        e2.setBackground(new java.awt.Color(255, 102, 51));
         e2.setForeground(new java.awt.Color(153, 0, 153));
+        e2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         e2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e2.setOpaque(true);
         getContentPane().add(e2);
         e2.setBounds(640, 160, 88, 66);
 
-        e1.setBackground(new java.awt.Color(0, 0, 0));
+        e1.setBackground(new java.awt.Color(153, 0, 0));
         e1.setForeground(new java.awt.Color(153, 0, 153));
+        e1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         e1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e1.setOpaque(true);
         getContentPane().add(e1);
         e1.setBounds(640, 80, 88, 66);
 
-        e4.setBackground(new java.awt.Color(255, 255, 255));
+        e4.setBackground(new java.awt.Color(255, 102, 51));
         e4.setForeground(new java.awt.Color(153, 0, 153));
+        e4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         e4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e4.setOpaque(true);
         getContentPane().add(e4);
         e4.setBounds(640, 320, 88, 66);
 
-        e3.setBackground(new java.awt.Color(0, 0, 0));
+        e3.setBackground(new java.awt.Color(153, 0, 0));
         e3.setForeground(new java.awt.Color(153, 0, 153));
+        e3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         e3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e3.setOpaque(true);
         getContentPane().add(e3);
         e3.setBounds(640, 240, 88, 66);
 
-        e5.setBackground(new java.awt.Color(0, 0, 0));
+        e5.setBackground(new java.awt.Color(153, 0, 0));
         e5.setForeground(new java.awt.Color(153, 0, 153));
+        e5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         e5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e5.setOpaque(true);
         getContentPane().add(e5);
         e5.setBounds(640, 400, 88, 66);
 
-        e6.setBackground(new java.awt.Color(255, 255, 255));
+        e6.setBackground(new java.awt.Color(255, 102, 51));
         e6.setForeground(new java.awt.Color(153, 0, 153));
+        e6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         e6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e6.setOpaque(true);
         getContentPane().add(e6);
         e6.setBounds(640, 480, 88, 66);
 
-        f6.setBackground(new java.awt.Color(0, 0, 0));
+        f6.setBackground(new java.awt.Color(153, 0, 0));
         f6.setForeground(new java.awt.Color(153, 0, 153));
+        f6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         f6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         f6.setOpaque(true);
         getContentPane().add(f6);
         f6.setBounds(740, 480, 88, 66);
 
-        f5.setBackground(new java.awt.Color(255, 255, 255));
+        f5.setBackground(new java.awt.Color(255, 102, 51));
         f5.setForeground(new java.awt.Color(153, 0, 153));
+        f5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         f5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         f5.setOpaque(true);
         getContentPane().add(f5);
         f5.setBounds(740, 400, 88, 66);
 
-        f4.setBackground(new java.awt.Color(0, 0, 0));
+        f4.setBackground(new java.awt.Color(153, 0, 0));
         f4.setForeground(new java.awt.Color(153, 0, 153));
+        f4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         f4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         f4.setOpaque(true);
         getContentPane().add(f4);
         f4.setBounds(740, 320, 88, 66);
 
-        f3.setBackground(new java.awt.Color(255, 255, 255));
+        f3.setBackground(new java.awt.Color(255, 102, 51));
         f3.setForeground(new java.awt.Color(153, 0, 153));
+        f3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         f3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         f3.setOpaque(true);
         getContentPane().add(f3);
         f3.setBounds(740, 240, 88, 66);
 
-        f2.setBackground(new java.awt.Color(0, 0, 0));
+        f2.setBackground(new java.awt.Color(153, 0, 0));
         f2.setForeground(new java.awt.Color(153, 0, 153));
+        f2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         f2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         f2.setOpaque(true);
         getContentPane().add(f2);
         f2.setBounds(740, 160, 88, 66);
 
-        f1.setBackground(new java.awt.Color(255, 255, 255));
+        f1.setBackground(new java.awt.Color(255, 102, 51));
         f1.setForeground(new java.awt.Color(153, 0, 153));
+        f1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         f1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         f1.setOpaque(true);
         getContentPane().add(f1);
         f1.setBounds(740, 80, 88, 66);
 
-        g6.setBackground(new java.awt.Color(255, 255, 255));
+        g6.setBackground(new java.awt.Color(255, 102, 51));
         g6.setForeground(new java.awt.Color(153, 0, 153));
+        g6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         g6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         g6.setOpaque(true);
         getContentPane().add(g6);
         g6.setBounds(840, 480, 88, 66);
 
-        g5.setBackground(new java.awt.Color(0, 0, 0));
+        g5.setBackground(new java.awt.Color(153, 0, 0));
         g5.setForeground(new java.awt.Color(153, 0, 153));
+        g5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         g5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         g5.setOpaque(true);
         getContentPane().add(g5);
         g5.setBounds(840, 400, 88, 66);
 
-        g4.setBackground(new java.awt.Color(255, 255, 255));
+        g4.setBackground(new java.awt.Color(255, 102, 51));
         g4.setForeground(new java.awt.Color(153, 0, 153));
+        g4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         g4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         g4.setOpaque(true);
         getContentPane().add(g4);
         g4.setBounds(840, 320, 88, 66);
 
-        g3.setBackground(new java.awt.Color(0, 0, 0));
+        g3.setBackground(new java.awt.Color(153, 0, 0));
         g3.setForeground(new java.awt.Color(153, 0, 153));
+        g3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         g3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         g3.setOpaque(true);
         getContentPane().add(g3);
         g3.setBounds(840, 240, 88, 66);
 
-        g2.setBackground(new java.awt.Color(255, 255, 255));
+        g2.setBackground(new java.awt.Color(255, 102, 51));
         g2.setForeground(new java.awt.Color(153, 0, 153));
+        g2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         g2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         g2.setOpaque(true);
         getContentPane().add(g2);
         g2.setBounds(840, 160, 88, 66);
 
-        g1.setBackground(new java.awt.Color(0, 0, 0));
+        g1.setBackground(new java.awt.Color(153, 0, 0));
         g1.setForeground(new java.awt.Color(153, 0, 153));
+        g1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         g1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         g1.setOpaque(true);
         getContentPane().add(g1);
         g1.setBounds(840, 80, 88, 66);
 
-        h6.setBackground(new java.awt.Color(0, 0, 0));
+        h6.setBackground(new java.awt.Color(153, 0, 0));
         h6.setForeground(new java.awt.Color(153, 0, 153));
+        h6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         h6.setOpaque(true);
         getContentPane().add(h6);
         h6.setBounds(940, 480, 88, 66);
 
-        h5.setBackground(new java.awt.Color(255, 255, 255));
+        h5.setBackground(new java.awt.Color(255, 102, 51));
         h5.setForeground(new java.awt.Color(153, 0, 153));
+        h5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         h5.setOpaque(true);
         getContentPane().add(h5);
         h5.setBounds(940, 400, 88, 66);
 
-        h4.setBackground(new java.awt.Color(0, 0, 0));
+        h4.setBackground(new java.awt.Color(153, 0, 0));
         h4.setForeground(new java.awt.Color(153, 0, 153));
+        h4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         h4.setOpaque(true);
         getContentPane().add(h4);
         h4.setBounds(940, 320, 88, 66);
 
-        h3.setBackground(new java.awt.Color(255, 255, 255));
+        h3.setBackground(new java.awt.Color(255, 102, 51));
         h3.setForeground(new java.awt.Color(153, 0, 153));
+        h3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         h3.setOpaque(true);
         getContentPane().add(h3);
         h3.setBounds(940, 240, 88, 66);
 
-        h2.setBackground(new java.awt.Color(0, 0, 0));
+        h2.setBackground(new java.awt.Color(153, 0, 0));
         h2.setForeground(new java.awt.Color(153, 0, 153));
+        h2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         h2.setOpaque(true);
         getContentPane().add(h2);
         h2.setBounds(940, 160, 88, 66);
 
-        h1.setBackground(new java.awt.Color(255, 255, 255));
+        h1.setBackground(new java.awt.Color(255, 102, 51));
         h1.setForeground(new java.awt.Color(153, 0, 153));
+        h1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         h1.setOpaque(true);
         getContentPane().add(h1);
         h1.setBounds(940, 80, 88, 66);
 
-        h7.setBackground(new java.awt.Color(255, 255, 255));
+        h7.setBackground(new java.awt.Color(255, 102, 51));
         h7.setForeground(new java.awt.Color(153, 0, 153));
+        h7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         h7.setOpaque(true);
         getContentPane().add(h7);
         h7.setBounds(940, 560, 88, 66);
 
-        g7.setBackground(new java.awt.Color(0, 0, 0));
+        g7.setBackground(new java.awt.Color(153, 0, 0));
         g7.setForeground(new java.awt.Color(153, 0, 153));
+        g7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         g7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         g7.setOpaque(true);
         getContentPane().add(g7);
         g7.setBounds(840, 560, 88, 66);
 
-        f7.setBackground(new java.awt.Color(255, 255, 255));
+        f7.setBackground(new java.awt.Color(255, 102, 51));
         f7.setForeground(new java.awt.Color(153, 0, 153));
+        f7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         f7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         f7.setOpaque(true);
         getContentPane().add(f7);
         f7.setBounds(740, 560, 88, 66);
 
-        e7.setBackground(new java.awt.Color(0, 0, 0));
+        e7.setBackground(new java.awt.Color(153, 0, 0));
         e7.setForeground(new java.awt.Color(153, 0, 153));
+        e7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         e7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e7.setOpaque(true);
         getContentPane().add(e7);
         e7.setBounds(640, 560, 88, 66);
 
-        e8.setBackground(new java.awt.Color(255, 255, 255));
+        e8.setBackground(new java.awt.Color(255, 102, 51));
         e8.setForeground(new java.awt.Color(153, 0, 153));
+        e8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         e8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         e8.setOpaque(true);
         getContentPane().add(e8);
         e8.setBounds(640, 640, 88, 66);
 
-        f8.setBackground(new java.awt.Color(0, 0, 0));
+        f8.setBackground(new java.awt.Color(153, 0, 0));
         f8.setForeground(new java.awt.Color(153, 0, 153));
+        f8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         f8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         f8.setOpaque(true);
         getContentPane().add(f8);
         f8.setBounds(740, 640, 88, 66);
 
-        g8.setBackground(new java.awt.Color(255, 255, 255));
+        g8.setBackground(new java.awt.Color(255, 102, 51));
         g8.setForeground(new java.awt.Color(153, 0, 153));
+        g8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         g8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         g8.setOpaque(true);
         getContentPane().add(g8);
         g8.setBounds(840, 640, 88, 66);
 
-        h8.setBackground(new java.awt.Color(0, 0, 0));
+        h8.setBackground(new java.awt.Color(153, 0, 0));
         h8.setForeground(new java.awt.Color(153, 0, 153));
+        h8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         h8.setOpaque(true);
         getContentPane().add(h8);
@@ -1128,8 +1346,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_clearMouseClicked
 
     private void a1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a1MouseClicked
-        // TODO add your handling code here:
-        System.out.println(cont_caballoBlanco+"contador");
+        // TODO add your handling code here:        
         lbl_caballoBlanco.setEnabled(true);
         lbl_reyBlanco.setEnabled(true);
         lbl_peonBlanco.setEnabled(true);
@@ -1139,8 +1356,7 @@ public class Main extends javax.swing.JFrame {
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
         
-        if (lbl_caballoBlanco.isOpaque() && hasImagea1 == false ) {
-            a1.setBackground(Color.red);
+        if (lbl_caballoBlanco.isOpaque() && hasImagea1 == false ) {            
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -1148,7 +1364,6 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagea1 = true;
         } else if (lbl_reyBlanco.isOpaque() && hasImagea1 == false ) {
-            a1.setBackground(Color.red);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -1156,7 +1371,6 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagea1 = true;
         } else if (lbl_peonBlanco.isOpaque() && hasImagea1 == false ) {
-            a1.setBackground(Color.red);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -1222,6 +1436,2218 @@ public class Main extends javax.swing.JFrame {
         lbl_reinaNegro.setOpaque(false);
         lbl_reinaNegro.setBackground(Color.gray);
     }//GEN-LAST:event_formMouseClicked
+
+    private void a2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a2MouseClicked
+        // TODO add your handling code here:        
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImagea2 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a2.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagea2 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a2.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagea2 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a2.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagea2 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a2.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagea2 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a2.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagea2 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagea2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a2.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagea2 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagea2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a2.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagea2 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a2.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagea2 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_a2MouseClicked
+
+    private void a3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a3MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImagea3 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a3.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagea3 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a3.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagea3 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a3.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagea3 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a3.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagea3 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a3.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagea3 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagea3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a3.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagea3 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagea3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a3.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagea3 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a3.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagea3 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_a3MouseClicked
+
+    private void a4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a4MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImagea4 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a4.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagea4 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a4.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagea4 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a4.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagea4 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a4.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagea4 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a4.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagea4 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagea4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a4.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagea4 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagea4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a4.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagea4 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a4.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagea4 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_a4MouseClicked
+
+    private void a5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a5MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImagea5 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a5.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagea5 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a5.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagea5 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a5.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagea5 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a5.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagea5 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a5.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagea5 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagea5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a5.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagea5 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagea5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a5.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagea5 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a5.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagea5 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_a5MouseClicked
+
+    private void a6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a6MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImagea6 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a6.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagea6 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a6.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagea6 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a6.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagea6 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a6.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagea6 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a6.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagea6 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagea6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a6.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagea6 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagea6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a6.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagea6 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a6.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagea6 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_a6MouseClicked
+
+    private void a7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a7MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImagea7 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a7.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagea7 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a7.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagea7 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a7.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagea7 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a7.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagea7 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a7.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagea7 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagea7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a7.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagea7 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagea7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a7.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagea7 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a7.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagea7 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_a7MouseClicked
+
+    private void a8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a8MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImagea8 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a8.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagea8 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a8.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagea8 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a8.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagea8 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a8.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagea8 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a8.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagea8 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagea8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a8.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagea8 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagea8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a8.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagea8 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a8.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagea8 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_a8MouseClicked
+
+    private void b1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b1MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImageb1 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b1.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImageb1 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b1.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImageb1 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b1.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImageb1 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b1.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImageb1 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b1.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImageb1 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImageb1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b1.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImageb1 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImageb1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b1.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImageb1 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b1.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImageb1 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_b1MouseClicked
+
+    private void b2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b2MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImageb2 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b2.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImageb2 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b2.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImageb2 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b2.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImageb2 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b2.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImageb2 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b2.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImageb2 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImageb2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b2.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImageb2 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImageb2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b2.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImageb2 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b2.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImageb2 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_b2MouseClicked
+
+    private void b3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b3MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImageb3 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b3.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImageb3 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b3.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImageb3 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b3.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImageb3 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b3.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImageb3 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b3.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImageb3 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImageb3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b3.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImageb3 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImageb3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b3.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImageb3 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b3.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImageb3 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_b3MouseClicked
+
+    private void b4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b4MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        
+        if (lbl_caballoBlanco.isOpaque() && hasImageb4 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b4.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImageb4 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b4.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImageb4 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b4.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImageb4 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b4.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImageb4 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b4.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImageb4 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImageb4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b4.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImageb4 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImageb4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b4.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImageb4 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b4.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImageb4 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_b4MouseClicked
+
+    private void b5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b5MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImageb5 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b5.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImageb5 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b5.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImageb5 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b5.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImageb5 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b5.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImageb5 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b5.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImageb5 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImageb5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b5.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImageb5 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImageb5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b5.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImageb5 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b5.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImageb5 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_b5MouseClicked
+
+    private void b6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b6MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImageb6 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b6.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImageb6 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b6.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImageb6 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b6.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImageb6 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b6.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImageb6 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b6.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImageb6 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImageb6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b6.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImageb6 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImageb6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b6.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImageb6 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b6.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImageb6 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_b6MouseClicked
+
+    private void b7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b7MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImageb7 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b7.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImageb7 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b7.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImageb7 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b7.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImageb7 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b7.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImageb7 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b7.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImageb7 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImageb7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b7.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImageb7 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImageb7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b7.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImageb7 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b7.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImageb7 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_b7MouseClicked
+
+    private void b8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b8MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImageb8 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b8.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImageb8 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b8.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImageb8 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b8.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImageb8 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b8.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImageb8 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b8.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImageb8 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImageb8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b8.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImageb8 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImageb8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b8.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImageb8 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            b8.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImageb8 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_b8MouseClicked
+
+    private void c1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c1MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImagec1 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c1.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagec1 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c1.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagec1 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c1.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagec1 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c1.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagec1 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c1.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagec1 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagec1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c1.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagec1 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagec1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c1.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagec1 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c1.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagec1 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_c1MouseClicked
+
+    private void c2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c2MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImagec2 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c2.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagec2 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c2.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagec2 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c2.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagec2 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c2.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagec2 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c2.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagec2 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagec2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c2.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagec2 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagec2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c2.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagec2 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c2.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagec2 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_c2MouseClicked
+
+    private void c3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c3MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImagec3 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c3.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagec3 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c3.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagec3 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c3.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagec3 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c3.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagec3 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c3.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagec3 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagec3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c3.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagec3 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagec3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c3.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagec3 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c3.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagec3 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_c3MouseClicked
+
+    private void c4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c4MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImagec4 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c4.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagec4 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c4.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagec4 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c4.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagec4 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c4.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagec4 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c4.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagec4 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagec4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c4.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagec4 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagec4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c4.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagec4 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c4.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagec4 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_c4MouseClicked
+
+    private void c5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c5MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImagec5 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c5.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagec5 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c5.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagec5 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c5.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagec5 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c5.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagec5 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c5.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagec5 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagec5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c5.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagec5 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagec5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c5.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagec5 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c5.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagec5 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_c5MouseClicked
+
+    private void c6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c6MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImagec6 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c6.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagec6 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c6.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagec6 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c6.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagec6 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c6.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagec6 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c6.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagec6 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagec6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c6.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagec6 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagec6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c6.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagec6 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c6.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagec6 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_c6MouseClicked
+
+    private void c7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c7MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImagec7 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c7.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagec7 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c7.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagec7 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c7.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagec7 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c7.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagec7 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c7.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagec7 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagec7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c7.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagec7 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagec7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c7.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagec7 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c7.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagec7 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_c7MouseClicked
+
+    private void c8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c8MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImagec8 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c8.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImagec8 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c8.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImagec8 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c8.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImagec8 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c8.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImagec8 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c8.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImagec8 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImagec8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c8.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImagec8 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImagec8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c8.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImagec8 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            c8.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImagec8 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_c8MouseClicked
+
+    private void d1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_d1MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImaged1 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d1.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImaged1 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d1.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImaged1 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d1.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImaged1 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d1.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImaged1 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d1.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImaged1 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImaged1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d1.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImaged1 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImaged1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d1.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImaged1 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged1 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d1.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImaged1 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_d1MouseClicked
+
+    private void d2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_d2MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImaged2 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d2.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImaged2 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d2.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImaged2 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d2.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImaged2 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d2.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImaged2 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d2.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImaged2 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImaged2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d2.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImaged2 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImaged2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d2.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImaged2 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged2 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d2.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImaged2 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_d2MouseClicked
+
+    private void d3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_d3MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImaged3 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d3.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImaged3 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d3.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImaged3 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d3.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImaged3 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d3.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImaged3 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d3.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImaged3 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImaged3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d3.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImaged3 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImaged3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d3.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImaged3 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged3 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d3.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImaged3 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_d3MouseClicked
+
+    private void d4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_d4MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImaged4 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d4.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImaged4 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d4.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImaged4 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d4.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImaged4 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d4.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImaged4 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d4.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImaged4 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImaged4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d4.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImaged4 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImaged4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d4.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImaged4 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged4 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d4.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImaged4 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_d4MouseClicked
+
+    private void d5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_d5MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImaged5 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d5.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImaged5 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d5.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImaged5 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d5.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImaged5 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d5.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImaged5 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d5.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImaged5 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImaged5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d5.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImaged5 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImaged5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d5.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImaged5 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged5 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d5.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImaged5 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_d5MouseClicked
+
+    private void d6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_d6MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImaged6 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d6.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImaged6 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d6.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImaged6 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d6.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImaged6 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d6.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImaged6 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d6.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImaged6 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImaged6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d6.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImaged6 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImaged6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d6.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImaged6 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged6 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d6.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImaged6 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_d6MouseClicked
+
+    private void d7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_d7MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImaged7 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d7.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImaged7 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d7.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImaged7 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d7.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImaged7 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d7.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImaged7 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d7.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImaged7 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImaged7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d7.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImaged7 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImaged7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d7.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImaged7 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged7 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d7.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImaged7 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_d7MouseClicked
+
+    private void d8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_d8MouseClicked
+        // TODO add your handling code here:
+        lbl_caballoBlanco.setEnabled(true);
+        lbl_reyBlanco.setEnabled(true);
+        lbl_peonBlanco.setEnabled(true);
+        lbl_reinaBlanco.setEnabled(true);
+        lbl_caballoNegro.setEnabled(true);
+        lbl_reyNegro.setEnabled(true);
+        lbl_peonNegro.setEnabled(true);
+        lbl_reinaNegro.setEnabled(true);
+        if (lbl_caballoBlanco.isOpaque() && hasImaged8 == false ) {            
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d8.setIcon(imageIcon);
+            lbl_caballoBlanco.setOpaque(false);
+            lbl_caballoBlanco.setBackground(Color.gray);
+            cont_caballoBlanco++;
+            hasImaged8 = true;
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d8.setIcon(imageIcon);
+            lbl_reyBlanco.setOpaque(false);
+            lbl_reyBlanco.setBackground(Color.gray);
+            cont_reyBlanco++;
+            hasImaged8 = true;
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d8.setIcon(imageIcon);
+            lbl_peonBlanco.setOpaque(false);
+            lbl_peonBlanco.setBackground(Color.gray);
+            cont_peonBlanco++;
+            hasImaged8 = true;
+        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d8.setIcon(imageIcon);
+            lbl_reinaBlanco.setOpaque(false);
+            lbl_reinaBlanco.setBackground(Color.gray);
+            cont_reinaBlanco++;
+            hasImaged8 = true;
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d8.setIcon(imageIcon);
+            lbl_caballoNegro.setOpaque(false);
+            lbl_caballoNegro.setBackground(Color.gray);
+            cont_caballoNegro++;
+            hasImaged8 =  true;
+        } else if (lbl_reyNegro.isOpaque() && hasImaged8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d8.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+            hasImaged8 = true;
+        } else if (lbl_peonNegro.isOpaque() && hasImaged8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d8.setIcon(imageIcon);
+            lbl_peonNegro.setOpaque(false);
+            lbl_peonNegro.setBackground(Color.gray);
+            cont_peonNegro++;
+            hasImaged8 = true;
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged8 == false ) {
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            d8.setIcon(imageIcon);
+            lbl_reinaNegro.setOpaque(false);
+            lbl_reinaNegro.setBackground(Color.gray);
+            cont_reinaNegro++;
+            hasImaged8 = true;
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
+        }
+    }//GEN-LAST:event_d8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1369,4 +3795,35 @@ public class Main extends javax.swing.JFrame {
     private int cont_peonNegro = 0;
     private int cont_reinaNegro = 0;
     boolean hasImagea1 = false;
+    boolean hasImagea2 = false;
+    boolean hasImagea3 = false;
+    boolean hasImagea4 = false;
+    boolean hasImagea5 = false;
+    boolean hasImagea6 = false;
+    boolean hasImagea7 = false;
+    boolean hasImagea8 = false;
+    boolean hasImageb1 = false;
+    boolean hasImageb2 = false;
+    boolean hasImageb3 = false;
+    boolean hasImageb4 = false;
+    boolean hasImageb5 = false;
+    boolean hasImageb6 = false;
+    boolean hasImageb7 = false;
+    boolean hasImageb8 = false;
+    boolean hasImagec1 = false;
+    boolean hasImagec2 = false;
+    boolean hasImagec3 = false;
+    boolean hasImagec4 = false;
+    boolean hasImagec5 = false;
+    boolean hasImagec6 = false;
+    boolean hasImagec7 = false;
+    boolean hasImagec8 = false;
+    boolean hasImaged1 = false;
+    boolean hasImaged2 = false;
+    boolean hasImaged3 = false;
+    boolean hasImaged4 = false;
+    boolean hasImaged5 = false;
+    boolean hasImaged6 = false;
+    boolean hasImaged7 = false;
+    boolean hasImaged8 = false;
 }
