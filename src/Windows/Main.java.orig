@@ -7,7 +7,6 @@ package Windows;
 
 import java.awt.Color;
 import java.awt.Image;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -818,15 +817,7 @@ public class Main extends javax.swing.JFrame {
 
     private void lbl_caballoBlancoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_caballoBlancoMouseClicked
         // TODO add your handling code here:
-        lbl_caballoBlanco.setEnabled(true);
-        lbl_reyBlanco.setEnabled(false);
-        lbl_peonBlanco.setEnabled(false);
-        lbl_reinaBlanco.setEnabled(false);
-        lbl_caballoNegro.setEnabled(false);
-        lbl_reyNegro.setEnabled(false);
-        lbl_peonNegro.setEnabled(false);
-        lbl_reinaNegro.setEnabled(false);
-        if (cont_caballoBlanco < 2 && lbl_caballoBlanco.isEnabled()) {
+        if (cont_caballoBlanco < 2) {
             lbl_caballoBlanco.setOpaque(true);
             lbl_caballoBlanco.setBackground(Color.red);
         } else {
@@ -838,15 +829,7 @@ public class Main extends javax.swing.JFrame {
 
     private void lbl_reyBlancoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_reyBlancoMouseClicked
         // TODO add your handling code here:
-        lbl_caballoBlanco.setEnabled(false);
-        lbl_reyBlanco.setEnabled(true);
-        lbl_peonBlanco.setEnabled(false);
-        lbl_reinaBlanco.setEnabled(false);
-        lbl_caballoNegro.setEnabled(false);
-        lbl_reyNegro.setEnabled(false);
-        lbl_peonNegro.setEnabled(false);
-        lbl_reinaNegro.setEnabled(false);
-        if (cont_reyBlanco < 1 && lbl_reyBlanco.isEnabled()) {
+        if (cont_reyBlanco < 1) {
             lbl_reyBlanco.setOpaque(true);
             lbl_reyBlanco.setBackground(Color.red);
         } else {
@@ -858,15 +841,7 @@ public class Main extends javax.swing.JFrame {
 
     private void lbl_peonBlancoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_peonBlancoMouseClicked
         // TODO add your handling code here:
-        lbl_caballoBlanco.setEnabled(false);
-        lbl_reyBlanco.setEnabled(false);
-        lbl_peonBlanco.setEnabled(true);
-        lbl_reinaBlanco.setEnabled(false);
-        lbl_caballoNegro.setEnabled(false);
-        lbl_reyNegro.setEnabled(false);
-        lbl_peonNegro.setEnabled(false);
-        lbl_reinaNegro.setEnabled(false);
-        if (cont_peonBlanco < 8 && lbl_peonBlanco.isEnabled()) {
+        if (cont_peonBlanco < 8) {
             lbl_peonBlanco.setOpaque(true);
             lbl_peonBlanco.setBackground(Color.red);
         } else {
@@ -878,15 +853,7 @@ public class Main extends javax.swing.JFrame {
 
     private void lbl_reinaBlancoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_reinaBlancoMouseClicked
         // TODO add your handling code here:
-        lbl_caballoBlanco.setEnabled(false);
-        lbl_reyBlanco.setEnabled(false);
-        lbl_peonBlanco.setEnabled(false);
-        lbl_reinaBlanco.setEnabled(true);
-        lbl_caballoNegro.setEnabled(false);
-        lbl_reyNegro.setEnabled(false);
-        lbl_peonNegro.setEnabled(false);
-        lbl_reinaNegro.setEnabled(false);
-        if (cont_reinaBlanco < 1 && lbl_reinaBlanco.isEnabled()) {
+        if (cont_reinaBlanco < 1) {
             lbl_reinaBlanco.setOpaque(true);
             lbl_reinaBlanco.setBackground(Color.red);
         } else {
@@ -898,15 +865,7 @@ public class Main extends javax.swing.JFrame {
 
     private void lbl_caballoNegroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_caballoNegroMouseClicked
         // TODO add your handling code here:
-        lbl_caballoBlanco.setEnabled(false);
-        lbl_reyBlanco.setEnabled(false);
-        lbl_peonBlanco.setEnabled(false);
-        lbl_reinaBlanco.setEnabled(false);
-        lbl_caballoNegro.setEnabled(true);
-        lbl_reyNegro.setEnabled(false);
-        lbl_peonNegro.setEnabled(false);
-        lbl_reinaNegro.setEnabled(false);
-        if (cont_caballoNegro < 2 && lbl_caballoNegro.isEnabled()) {
+        if (cont_caballoNegro < 2) {
             lbl_caballoNegro.setOpaque(true);
             lbl_caballoNegro.setBackground(Color.red);
         } else {
@@ -918,15 +877,7 @@ public class Main extends javax.swing.JFrame {
 
     private void lbl_reyNegroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_reyNegroMouseClicked
         // TODO add your handling code here:
-        lbl_caballoBlanco.setEnabled(false);
-        lbl_reyBlanco.setEnabled(false);
-        lbl_peonBlanco.setEnabled(false);
-        lbl_reinaBlanco.setEnabled(false);
-        lbl_caballoNegro.setEnabled(false);
-        lbl_reyNegro.setEnabled(true);
-        lbl_peonNegro.setEnabled(false);
-        lbl_reinaNegro.setEnabled(false);
-        if (cont_reyNegro < 1 && lbl_reyNegro.isEnabled()) {
+        if (cont_reyNegro < 1) {
             lbl_reyNegro.setOpaque(true);
             lbl_reyNegro.setBackground(Color.red);
         } else {
@@ -938,15 +889,7 @@ public class Main extends javax.swing.JFrame {
 
     private void lbl_peonNegroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_peonNegroMouseClicked
         // TODO add your handling code here:
-        lbl_caballoBlanco.setEnabled(false);
-        lbl_reyBlanco.setEnabled(false);
-        lbl_peonBlanco.setEnabled(false);
-        lbl_reinaBlanco.setEnabled(false);
-        lbl_caballoNegro.setEnabled(false);
-        lbl_reyNegro.setEnabled(false);
-        lbl_peonNegro.setEnabled(true);
-        lbl_reinaNegro.setEnabled(false);
-        if (cont_peonNegro < 8 && lbl_peonNegro.isEnabled()) {
+        if (cont_peonNegro < 8) {
             lbl_peonNegro.setOpaque(true);
             lbl_peonNegro.setBackground(Color.red);
         } else {
@@ -958,19 +901,17 @@ public class Main extends javax.swing.JFrame {
 
     private void lbl_reinaNegroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_reinaNegroMouseClicked
         // TODO add your handling code here:
-        lbl_caballoBlanco.setEnabled(false);
-        lbl_reyBlanco.setEnabled(false);
-        lbl_peonBlanco.setEnabled(false);
-        lbl_reinaBlanco.setEnabled(false);
-        lbl_caballoNegro.setEnabled(false);
-        lbl_reyNegro.setEnabled(false);
-        lbl_peonNegro.setEnabled(false);
-        lbl_reinaNegro.setEnabled(true);
-        if (cont_reinaNegro < 1 && lbl_reinaNegro.isEnabled()) {
+        if (cont_reinaNegro < 1) {
             lbl_reinaNegro.setOpaque(true);
             lbl_reinaNegro.setBackground(Color.red);
+<<<<<<< HEAD
+        }else{
+            JOptionPane.showInternalMessageDialog(rootPane, "No se puede agregar mas de una (1) Reina!!");
+=======
+            cont_reinaNegro++;
         } else {
             JOptionPane.showMessageDialog(null, "No se puede agregar mas de una (1) Reina!!");
+>>>>>>> 28352ff08c7cac3a4021d7e94ab41a0cb2b73a5b
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
         }
@@ -1129,77 +1070,83 @@ public class Main extends javax.swing.JFrame {
 
     private void a1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a1MouseClicked
         // TODO add your handling code here:
-        System.out.println(cont_caballoBlanco+"contador");
-        lbl_caballoBlanco.setEnabled(true);
-        lbl_reyBlanco.setEnabled(true);
-        lbl_peonBlanco.setEnabled(true);
-        lbl_reinaBlanco.setEnabled(true);
-        lbl_caballoNegro.setEnabled(true);
-        lbl_reyNegro.setEnabled(true);
-        lbl_peonNegro.setEnabled(true);
-        lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea1 == false ) {
+        if (lbl_caballoBlanco.isOpaque()) {
             a1.setBackground(Color.red);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
-            hasImagea1 = true;
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea1 == false ) {
+        }else if(lbl_reyBlanco.isOpaque()){
             a1.setBackground(Color.red);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
-            lbl_reyBlanco.setBackground(Color.gray);
+            lbl_reyBlanco.setBackground(Color.gray);            
             cont_reyBlanco++;
-            hasImagea1 = true;
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea1 == false ) {
+        }else if(lbl_peonBlanco.isOpaque()){
             a1.setBackground(Color.red);
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
-            hasImagea1 = true;
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea1 == false ) {
+        }else if(lbl_reinaBlanco.isOpaque()){
+<<<<<<< HEAD
+=======
+            a1.setBackground(Color.red);
+>>>>>>> 28352ff08c7cac3a4021d7e94ab41a0cb2b73a5b
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
-            hasImagea1 = true;
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea1 == false ) {
+        }else if (lbl_caballoNegro.isOpaque()){
+<<<<<<< HEAD
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+=======
+            a1.setBackground(Color.GRAY);
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoNegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+>>>>>>> 28352ff08c7cac3a4021d7e94ab41a0cb2b73a5b
             a1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea1 =  true;
-        } else if (lbl_reyNegro.isOpaque() && hasImagea1 == false ) {
+<<<<<<< HEAD
+        }else if(lbl_reyNegro.isOpaque()){
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
-            hasImagea1 = true;
-        } else if (lbl_peonNegro.isOpaque() && hasImagea1 == false ) {
+        }else if(lbl_peonNegro.isOpaque()){
+=======
+        }else if(lbl_peonNegro.isOpaque()){
+            a1.setBackground(Color.GRAY);
+>>>>>>> 28352ff08c7cac3a4021d7e94ab41a0cb2b73a5b
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
-            hasImagea1 = true;
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea1 == false ) {
+<<<<<<< HEAD
+        }else if(lbl_reinaNegro.isOpaque()){
+=======
+        }else if(lbl_reyNegro.isOpaque()){
+            a1.setBackground(Color.GRAY);
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
+            a1.setIcon(imageIcon);
+            lbl_reyNegro.setOpaque(false);
+            lbl_reyNegro.setBackground(Color.gray);
+            cont_reyNegro++;
+        }else if(lbl_reinaNegro.isOpaque()){
+            a1.setBackground(Color.GRAY);
+>>>>>>> 28352ff08c7cac3a4021d7e94ab41a0cb2b73a5b
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
-            hasImagea1 = true;
-        }else {
-            JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a1MouseClicked
 
@@ -1207,20 +1154,6 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         lbl_caballoBlanco.setOpaque(false);
         lbl_caballoBlanco.setBackground(Color.gray);
-        lbl_reyBlanco.setOpaque(false);
-        lbl_reyBlanco.setBackground(Color.gray);
-        lbl_peonBlanco.setOpaque(false);
-        lbl_peonBlanco.setBackground(Color.gray);
-        lbl_reinaBlanco.setOpaque(false);
-        lbl_reinaBlanco.setBackground(Color.gray);
-        lbl_caballoNegro.setOpaque(false);
-        lbl_caballoNegro.setBackground(Color.gray);
-        lbl_reyNegro.setOpaque(false);
-        lbl_reyNegro.setBackground(Color.gray);
-        lbl_peonNegro.setOpaque(false);
-        lbl_peonNegro.setBackground(Color.gray);
-        lbl_reinaNegro.setOpaque(false);
-        lbl_reinaNegro.setBackground(Color.gray);
     }//GEN-LAST:event_formMouseClicked
 
     /**
@@ -1368,5 +1301,4 @@ public class Main extends javax.swing.JFrame {
     private int cont_reyNegro = 0;
     private int cont_peonNegro = 0;
     private int cont_reinaNegro = 0;
-    boolean hasImagea1 = false;
 }
