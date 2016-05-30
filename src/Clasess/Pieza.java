@@ -10,7 +10,7 @@ package Clasess;
  * @author Miguel A. Ardon E
  */
 public class Pieza {
-    private boolean available;
+    boolean available;
     private int x;
     private int y;
 

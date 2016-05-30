@@ -31,11 +31,11 @@ public class Peon extends Pieza {
 
         if (fromY == toY) {
 
-            if (tablero[fromX + 1][fromY] != null) {
+            if (tablero.getespacio(fromX+1, fromY) != null) {
                 return false;
             }
 
-            if (tablero[fromX - 1][fromY] != null) {
+            if (tablero.getespacio(fromX-1, fromY) != null) {
                 return false;
             }
 
@@ -43,25 +43,25 @@ public class Peon extends Pieza {
                 return false;
             } else if (Math.abs(toX - fromX) == 2) {
 
-                if (tablero[fromX + 2][fromY] != null) {
+                if (tablero.getespacio(fromX+2, fromY) != null) {
                     return false;
                 }
 
-                if (tablero[fromX - 2][fromY] != null) {
+                if (tablero.getespacio(fromX-2, fromY)!= null) {
                     return false;
                 }
             }
 
             //En passante
             if (toY + 1 < 8) {
-                if (tablero[toX][toY + 1] != null) {
-                    if (tablero[toX][toY + 1]) {
+                if (tablero.getespacio(toX, toY+1) != null) {
+                    if (tablero.getespacio(toX, toY+1) == null) {
                         available = true;
                     }
                 }
             } else if (toY - 1 > 0) {
-                if (tablero[toX][toY - 1] != null) {
-                    if (tablero[toX][toY - 1]) {
+                if (tablero.getespacio(toX, toY-1) != null) {
+                    if (tablero.getespacio(toX, toY-1) == null) {
                         available = true;
                     }
                 }
@@ -72,7 +72,7 @@ public class Peon extends Pieza {
                 return false;
             }
 
-            if (tablero[toX][toY] == null) {
+            if (tablero.getespacio(toX, toY) == null) {
                 /*if(newRow - 1 > 0){
                  if(newCol - 1 > 0){
                  if(board[newRow - 1][newCol - 1] != null){
