@@ -9,9 +9,9 @@ package Clasess;
  *
  * @author Miguel A. Ardon E
  */
-public class Queen extends Pieza{
+public class Rey extends Pieza{
     
-    public Queen(boolean available, int x, int y) {
+     public Rey(boolean available, int x, int y) {
         super(available, x, y);
     }
 
@@ -19,14 +19,9 @@ public class Queen extends Pieza{
     public boolean isValid(Tablero tablero, int fromX, int fromY, int toX, int toY) {
         if(super.isValid(tablero, fromX, fromY, toX, toY) == false)
             return false;
-        //diagonal
-        if(toX - fromX == toY - fromY)
-            return true;
-        if(toX == fromX)
-            return true;
-        if(toY == fromY)
-            return true;
-
+        if(Math.sqrt(Math.pow(Math.abs((toX - fromX)),2)) + Math.pow(Math.abs((toY - fromY)), 2) != Math.sqrt(2)){
+            return false;
+        }
         return false;
     }
 }
