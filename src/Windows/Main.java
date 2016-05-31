@@ -48,7 +48,7 @@ public class Main extends javax.swing.JFrame {
         ImageIcon imageIcon7 = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(78, 140, Image.SCALE_DEFAULT));
         lbl_reinaNegro.setIcon(imageIcon7);
         for (int i = 0; i < matriz_inicial.length; i++) {
-            for (int j = 0; j < matriz_inicial.length - 1; j++) {
+            for (int j = 0; j < matriz_inicial[i].length ; j++) {
                 matriz_inicial[i][j] = " ";
             }
         }
@@ -1533,7 +1533,7 @@ public class Main extends javax.swing.JFrame {
         }
         /////////////limpiar lista global
         ListaPiezas lista_piezas = new ListaPiezas();
-        
+
     }//GEN-LAST:event_btn_clearMouseClicked
 
     private void a1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a1MouseClicked
@@ -6625,54 +6625,49 @@ public class Main extends javax.swing.JFrame {
 
     private void btn_startMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_startMouseClicked
         // TODO add your handling code here:
-        int cont=0;
+        int cont = 0;
         int hayonorey = 0;
-        String piezas = "";
         imprimir(matriz_inicial);
         for (int i = 0; i < matriz_inicial.length; i++) {
-            for (int j = 0; j < matriz_inicial.length - 1; j++) {
-                if (matriz_inicial[i][j].contains("cb")) {
-                    lista_piezas.insert(new NodoPiezas("cb"),cont);
-                    cont++;
-                }
-                if (matriz_inicial[i][j].contains("reyb")) {
-                    lista_piezas.insert(new NodoPiezas(matriz_inicial[i][j]),cont);
-                    cont++;
-                }
-                if (matriz_inicial[i][j].contains("pb")) {
-                    lista_piezas.insert(new NodoPiezas("pb"),cont);
-                    cont++;
-                }
-                if (matriz_inicial[i][j].contains("reinab")) {
-                    lista_piezas.insert(new NodoPiezas("reinab"),cont);
-                    cont++;
-                }
-                if (matriz_inicial[i][j].contains("cn")) {
-                    lista_piezas.insert(new NodoPiezas("cn"),cont);
-                    cont++;
-                }
-                if (matriz_inicial[i][j].contains("reyn")) {
-                    lista_piezas.insert(new NodoPiezas("reyn"),cont);
-                    cont++;
-                }
-                if (matriz_inicial[i][j].contains("pn")) {
-                    lista_piezas.insert(new NodoPiezas("pn"),cont);
-                    cont++;
-                }
-                if (matriz_inicial[i][j].contains("reinan")) {
-                    lista_piezas.insert(new NodoPiezas("reinan"),cont);
-                    cont++;
-                }
+            for (int j = 0; j < matriz_inicial[i].length; j++) {
                 if (matriz_inicial[i][j].contains("reyb")) {
                     hayonorey++;
                 }
                 if (matriz_inicial[i][j].contains("reyn")) {
                     hayonorey++;
                 }
-
             }
         }
-        
+        for (int i = 0; i < matriz_inicial.length; i++) {
+            for (int j = 0; j < matriz_inicial[i].length ; j++) {
+                if (matriz_inicial[i][j].contentEquals("cb")) {
+                    lista_piezas.insert(new NodoPiezas("cb"), cont);
+                    cont++;
+                }else if (matriz_inicial[i][j].contentEquals("reyb")) {
+                    lista_piezas.insert(new NodoPiezas("reyb"), cont);
+                    cont++;
+                }else if (matriz_inicial[i][j].contentEquals("pb")) {
+                    lista_piezas.insert(new NodoPiezas("pb"), cont);
+                    cont++;
+                }else if (matriz_inicial[i][j].contentEquals("reinab")) {
+                    lista_piezas.insert(new NodoPiezas("reinab"), cont);
+                    cont++;
+                } else if (matriz_inicial[i][j].contentEquals("cn")) {
+                    lista_piezas.insert(new NodoPiezas("cn"), cont);
+                    cont++;
+                }else if (matriz_inicial[i][j].contains("reyn")) {
+                    lista_piezas.insert(new NodoPiezas("reyn"), cont);
+                    cont++;
+                }else if (matriz_inicial[i][j].contains("pn")) {
+                    lista_piezas.insert(new NodoPiezas("pn"), cont);
+                    cont++;
+                }else if (matriz_inicial[i][j].contains("reinan")) {
+                    lista_piezas.insert(new NodoPiezas("reinan"), cont);
+                    cont++;
+                }
+            }
+        }
+
         if (hayonorey != 2) {
             JOptionPane.showMessageDialog(null, "Falta uno o dos reyes");
         } else {
@@ -6683,32 +6678,33 @@ public class Main extends javax.swing.JFrame {
             Peon c = null;
             Queen d = null;
             lista_piezas.Print_Lista();
-            while(lista_piezas.getHead().getNext()!= null){
-                
-                for (int i = 0; i < matriz_inicial.length-1; i++) {
-                    System.out.println("hola");
-                    for (int j = 0; j < matriz_inicial.length-1; j++) {                   
-                        System.out.println("hola");
-                        if(lista_piezas.get(i).getPieza().equalsIgnoreCase((matriz_inicial[i][j]))){
-                            if(lista_piezas.get(i).getPieza().equalsIgnoreCase("cb") || lista_piezas.get(i).getPieza().equalsIgnoreCase("cn")){
-                                a  = new Caballo(false,i,j);
-                            }else if(lista_piezas.get(i).getPieza().toString()=="reyb" || lista_piezas.get(i).getPieza().toString()=="reyn"){
-                                b = new Rey(false,i,j);
-                            }else if(lista_piezas.get(i).getPieza().toString()=="pb" || lista_piezas.get(i).getPieza().toString()=="pn"){
-                                c = new Peon(false,i,j);
-                            }else if(lista_piezas.get(i).getPieza().toString()=="reinab" || lista_piezas.get(i).getPieza().toString()=="reinan"){
-                                d = new Queen(false,i,j);
-                            } 
+            
+            NodoPiezas temp = lista_piezas.getHead();
+            do{                
+                for (int i = 0; i < matriz_inicial.length; i++) {                    
+                    for (int j = 0; j < matriz_inicial[i].length; j++) {                        
+                        if (lista_piezas.get(i).getNodopieza().getPieza().contentEquals((matriz_inicial[i][j]))) {
+                            System.out.println("JAJAJA");
+                            if (lista_piezas.get(i).getPieza().equalsIgnoreCase("cb") || lista_piezas.get(i).getPieza().equalsIgnoreCase("cn")) {
+                                a = new Caballo(false, i, j);
+                            } else if (lista_piezas.get(i).getPieza().toString() == "reyb" || lista_piezas.get(i).getPieza().toString() == "reyn") {
+                                b = new Rey(false, i, j);
+                            } else if (lista_piezas.get(i).getPieza().toString() == "pb" || lista_piezas.get(i).getPieza().toString() == "pn") {
+                                c = new Peon(false, i, j);
+                            } else if (lista_piezas.get(i).getPieza().toString() == "reinab" || lista_piezas.get(i).getPieza().toString() == "reinan") {
+                                d = new Queen(false, i, j);
+                            }
                             for (int k = 0; k < matriz_inicial.length; k++) {
-                                for (int l = 0; l < matriz_inicial.length-1; l++) {
-                                    if(a.isValid(matriz_inicial, i, j, k, l) || b.isValid(matriz_inicial, i, j, k, l) || c.isValid(matriz_inicial, i, j, k, l) ||d.isValid(matriz_inicial, i, j, k, l)){
+                                for (int l = 0; l < matriz_inicial.length - 1; l++) {
+                                    if (a.isValid(matriz_inicial, i, j, k, l) || b.isValid(matriz_inicial, i, j, k, l) || c.isValid(matriz_inicial, i, j, k, l) || d.isValid(matriz_inicial, i, j, k, l)) {
                                     }
                                 }
                             }
                         }
                     }
                 }
-            }
+                temp = temp.getNext();
+            }while(temp != null);
 //            Arbol mapeo = new Arbol(raiz);
 //            mapeo.insertar(new NodoArbol(), new NodoArbol(), 0, matriz_inicial, piezas);
 //            System.out.println("La profundidad del arbol es = " + mapeo.profundidad(mapeo.raiz));
@@ -6721,13 +6717,13 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_startMouseClicked
     public static void imprimir(String[][] matriz_inicial) {
         for (int i = 0; i < matriz_inicial.length; i++) {
-            for (int j = 0; j < matriz_inicial.length - 1; j++) {
+            for (int j = 0; j < matriz_inicial[i].length; j++) {
                 System.out.print("[" + matriz_inicial[i][j] + "]");
             }
             System.out.println();
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -6938,6 +6934,6 @@ public class Main extends javax.swing.JFrame {
     boolean hasImageh6 = false;
     boolean hasImageh7 = false;
     boolean hasImageh8 = false;
-    private String[][] matriz_inicial = new String[8][8];
+    private String[][] matriz_inicial = new String[7][7];
     private ListaPiezas lista_piezas = new ListaPiezas();
 }

@@ -10,7 +10,7 @@ package Clasess;
  * @author Miguel A. Ardon E
  */
 public class NodoPiezas {
-    
+
     String pieza;
     NodoPiezas next;
 
@@ -19,6 +19,7 @@ public class NodoPiezas {
 
     public NodoPiezas(String pieza) {
         this.pieza = pieza;
+        this.next = null;
     }
 
     public String getPieza() {
@@ -28,13 +29,16 @@ public class NodoPiezas {
     public void setPieza(String pieza) {
         this.pieza = pieza;
     }
-    
-        public NodoPiezas getNext() {
+
+    public NodoPiezas getNext() {
         return next;
     }
 
     public void setNext(NodoPiezas next) {
         this.next = next;
     }
-    
+
+    public NodoPiezas getNodopieza() {
+        return next;
+    }
 }
