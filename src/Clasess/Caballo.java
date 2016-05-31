@@ -15,7 +15,7 @@ public class Caballo extends Pieza{
     }
 
     @Override
-    public boolean isValid(String [][] matrix, int fromX, int fromY, int toX, int toY) {
+    public boolean isValid(String[][] matrix, int fromX, int fromY, int toX, int toY) {
         if(super.isValid(matrix, fromX, fromY, toX, toY) == false)
             return false;
 

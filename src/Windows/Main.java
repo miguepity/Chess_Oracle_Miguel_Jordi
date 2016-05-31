@@ -6680,22 +6680,25 @@ public class Main extends javax.swing.JFrame {
             lista_piezas.Print_Lista();
             
             NodoPiezas temp = lista_piezas.getHead();
+            int conta=0;
             do{                
-                for (int i = 0; i < matriz_inicial.length; i++) {                    
-                    for (int j = 0; j < matriz_inicial[i].length; j++) {                        
-                        if (lista_piezas.get(i).getNodopieza().getPieza().contentEquals((matriz_inicial[i][j]))) {
+                for (int i = 0; i < matriz_inicial.length; i++) {
+                    conta++;
+                    for (int j = 0; j < matriz_inicial[i].length; j++) {
+                        
+                        if (temp.getNodopieza().getPieza().contentEquals((matriz_inicial[i][j]))) {
                             System.out.println("JAJAJA");
-                            if (lista_piezas.get(i).getPieza().equalsIgnoreCase("cb") || lista_piezas.get(i).getPieza().equalsIgnoreCase("cn")) {
+                            if (temp.getNodopieza().getPieza().equalsIgnoreCase("cb") || temp.getNodopieza().getPieza().equalsIgnoreCase("cn")) {
                                 a = new Caballo(false, i, j);
-                            } else if (lista_piezas.get(i).getPieza().toString() == "reyb" || lista_piezas.get(i).getPieza().toString() == "reyn") {
+                            } else if (temp.getNodopieza().getPieza().equalsIgnoreCase("reyb") || temp.getNodopieza().getPieza().equalsIgnoreCase("reyn")) {
                                 b = new Rey(false, i, j);
-                            } else if (lista_piezas.get(i).getPieza().toString() == "pb" || lista_piezas.get(i).getPieza().toString() == "pn") {
+                            } else if (temp.getNodopieza().getPieza().equalsIgnoreCase("pb") || temp.getNodopieza().getPieza().equalsIgnoreCase("pn")) {
                                 c = new Peon(false, i, j);
-                            } else if (lista_piezas.get(i).getPieza().toString() == "reinab" || lista_piezas.get(i).getPieza().toString() == "reinan") {
+                            } else if (temp.getNodopieza().getPieza().equalsIgnoreCase("reinab") || temp.getNodopieza().getPieza().equalsIgnoreCase("reinan")) {
                                 d = new Queen(false, i, j);
                             }
                             for (int k = 0; k < matriz_inicial.length; k++) {
-                                for (int l = 0; l < matriz_inicial.length - 1; l++) {
+                                for (int l = 0; l < matriz_inicial[k].length ; l++) {
                                     if (a.isValid(matriz_inicial, i, j, k, l) || b.isValid(matriz_inicial, i, j, k, l) || c.isValid(matriz_inicial, i, j, k, l) || d.isValid(matriz_inicial, i, j, k, l)) {
                                     }
                                 }
@@ -6934,6 +6937,6 @@ public class Main extends javax.swing.JFrame {
     boolean hasImageh6 = false;
     boolean hasImageh7 = false;
     boolean hasImageh8 = false;
-    private String[][] matriz_inicial = new String[7][7];
+    private String[][] matriz_inicial = new String[8][8];
     private ListaPiezas lista_piezas = new ListaPiezas();
 }
