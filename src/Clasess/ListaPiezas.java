@@ -15,7 +15,7 @@ public class ListaPiezas {
 
     public ListaPiezas() {
         this.tamano = 0;
-        this.head = null;
+        head = new NodoPiezas();
     }
 
     public NodoPiezas getHead() {
@@ -41,7 +41,7 @@ public class ListaPiezas {
             newNodo.setNext(head);
             this.setHead(newNodo);
         }
-        while (newHead.getNext()!=null) {
+        while (newHead.getNext()!= null) {
             newHead =newHead.getNext();
             cont++;
             if (cont == pos) {
@@ -87,8 +87,26 @@ public class ListaPiezas {
             for (int i = 0; i < Posicion; i++) {
                 tmp = tmp.getNext();
             }
-            return tmp.next;
+            return tmp.getNext();
         }
+    }
+    public void Print_Lista(){        
+        NodoPiezas temp = head;
+        int cont = 0;
+        while(temp != null){
+            if(cont == 0){
+                System.out.print("[H]");
+            }
+            if(temp.getNext() != null){
+                System.out.print("[" + temp.getPieza() + "] - ");
+                cont++;
+            }else{
+                System.out.print("[" + temp.getPieza() + "]" );
+                cont++;
+            }
+            temp = temp.next;
+        }
+        System.out.println("");
     }
 }
 

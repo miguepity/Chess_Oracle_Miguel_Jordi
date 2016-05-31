@@ -6631,42 +6631,42 @@ public class Main extends javax.swing.JFrame {
         imprimir(matriz_inicial);
         for (int i = 0; i < matriz_inicial.length; i++) {
             for (int j = 0; j < matriz_inicial.length - 1; j++) {
-                if (matriz_inicial[i][j].equalsIgnoreCase("cb")) {
+                if (matriz_inicial[i][j].contains("cb")) {
                     lista_piezas.insert(new NodoPiezas("cb"),cont);
                     cont++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("reyb")) {
+                if (matriz_inicial[i][j].contains("reyb")) {
                     lista_piezas.insert(new NodoPiezas(matriz_inicial[i][j]),cont);
                     cont++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("pb")) {
+                if (matriz_inicial[i][j].contains("pb")) {
                     lista_piezas.insert(new NodoPiezas("pb"),cont);
                     cont++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("reinab")) {
+                if (matriz_inicial[i][j].contains("reinab")) {
                     lista_piezas.insert(new NodoPiezas("reinab"),cont);
                     cont++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("cn")) {
+                if (matriz_inicial[i][j].contains("cn")) {
                     lista_piezas.insert(new NodoPiezas("cn"),cont);
                     cont++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("reyn")) {
+                if (matriz_inicial[i][j].contains("reyn")) {
                     lista_piezas.insert(new NodoPiezas("reyn"),cont);
                     cont++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("pn")) {
+                if (matriz_inicial[i][j].contains("pn")) {
                     lista_piezas.insert(new NodoPiezas("pn"),cont);
                     cont++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("reinan")) {
+                if (matriz_inicial[i][j].contains("reinan")) {
                     lista_piezas.insert(new NodoPiezas("reinan"),cont);
                     cont++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("reyb")) {
+                if (matriz_inicial[i][j].contains("reyb")) {
                     hayonorey++;
                 }
-                if (matriz_inicial[i][j].equalsIgnoreCase("reyn")) {
+                if (matriz_inicial[i][j].contains("reyn")) {
                     hayonorey++;
                 }
 
@@ -6682,12 +6682,15 @@ public class Main extends javax.swing.JFrame {
             Rey b = null;
             Peon c = null;
             Queen d = null;
+            lista_piezas.Print_Lista();
             while(lista_piezas.getHead().getNext()!= null){
                 
-                for (int i = 0; i < matriz_inicial.length; i++) {
-                    for (int j = 0; j < matriz_inicial.length-1; j++) {
-                        if(lista_piezas.get(i).getPieza().equals(matriz_inicial[i][j])){
-                            if(lista_piezas.get(i).getPieza().toString()=="cb" || lista_piezas.get(i).getPieza().toString()=="cn"){
+                for (int i = 0; i < matriz_inicial.length-1; i++) {
+                    System.out.println("hola");
+                    for (int j = 0; j < matriz_inicial.length-1; j++) {                   
+                        System.out.println("hola");
+                        if(lista_piezas.get(i).getPieza().equalsIgnoreCase((matriz_inicial[i][j]))){
+                            if(lista_piezas.get(i).getPieza().equalsIgnoreCase("cb") || lista_piezas.get(i).getPieza().equalsIgnoreCase("cn")){
                                 a  = new Caballo(false,i,j);
                             }else if(lista_piezas.get(i).getPieza().toString()=="reyb" || lista_piezas.get(i).getPieza().toString()=="reyn"){
                                 b = new Rey(false,i,j);
@@ -6724,7 +6727,7 @@ public class Main extends javax.swing.JFrame {
             System.out.println();
         }
     }
-
+    
     /**
      * @param args the command line arguments
      */
