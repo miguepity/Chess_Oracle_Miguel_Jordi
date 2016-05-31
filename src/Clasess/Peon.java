@@ -91,4 +91,3 @@ public class Peon extends Pieza {
         return true;
     }
 }
-3
