@@ -41,7 +41,7 @@ public class Pieza {
         this.y = y;
     }
 
-    public boolean isValid(Tablero tablero, int fromX, int fromY, int toX, int toY){
+    public boolean isValid(String[][] matrix, int fromX, int fromY, int toX, int toY){
         if(toX == fromX && toY == fromY)
             return false; //cannot move nothing
         if(toX < 0 || toX > 7 || fromX < 0 || fromX > 7 || toY < 0 || toY > 7 || fromY <0 || fromY > 7)

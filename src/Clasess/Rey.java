@@ -16,8 +16,8 @@ public class Rey extends Pieza{
     }
 
     @Override
-    public boolean isValid(Tablero tablero, int fromX, int fromY, int toX, int toY) {
-        if(super.isValid(tablero, fromX, fromY, toX, toY) == false)
+    public boolean isValid(String [][] matrix, int fromX, int fromY, int toX, int toY) {
+        if(super.isValid(matrix, fromX, fromY, toX, toY) == false)
             return false;
         if(Math.sqrt(Math.pow(Math.abs((toX - fromX)),2)) + Math.pow(Math.abs((toY - fromY)), 2) != Math.sqrt(2)){
             return false;

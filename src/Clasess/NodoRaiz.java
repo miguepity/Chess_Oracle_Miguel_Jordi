@@ -12,11 +12,11 @@ package Clasess;
 public class NodoRaiz {
     NodoRaiz next;    
     String[][] mapeo;
-    String piezas;
+    ListaPiezas piezas;
     NodoRaiz hermano;
     NodoRaiz hijo;
 
-    public NodoRaiz(String[][] mapeo, String pieza) {
+    public NodoRaiz(String[][] mapeo, ListaPiezas pieza) {
         mapeo = mapeo;
         piezas = pieza;
         hermano = null;
@@ -32,11 +32,11 @@ public class NodoRaiz {
         this.mapeo = mapeo;
     }
 
-    public String getPiezas() {
+    public ListaPiezas getPiezas() {
         return piezas;
     }
 
-    public void setPiezas(String piezas) {
+    public void setPiezas(ListaPiezas piezas) {
         this.piezas = piezas;
     }
 

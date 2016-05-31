@@ -10,14 +10,14 @@ package Clasess;
  * @author Miguel A. Ardon E
  */
 public class Peon extends Pieza {
-    
+
     public Peon(boolean available, int x, int y) {
         super(available, x, y);
     }
 
     @Override
-    public boolean isValid(Tablero tablero, int fromX, int fromY, int toX, int toY) {
-        if (super.isValid(tablero, fromX, fromY, toX, toY) == false) {
+    public boolean isValid(String[][] matrix, int fromX, int fromY, int toX, int toY) {
+        if (super.isValid(matrix, fromX, fromY, toX, toY) == false) {
             return false;
         }
 
@@ -30,41 +30,43 @@ public class Peon extends Pieza {
         }
 
         if (fromY == toY) {
-
-            if (tablero.getespacio(fromX+1, fromY) != null) {
+            //Not taking a piece
+            if (matrix[fromX + 1][fromY] != null) {
                 return false;
             }
 
-            if (tablero.getespacio(fromX-1, fromY) != null) {
+            if (matrix[fromX - 1][fromY] != null) {
                 return false;
+
             }
 
             if (Math.abs(toX - fromX) > 2) {
                 return false;
             } else if (Math.abs(toX - fromX) == 2) {
 
-                if (tablero.getespacio(fromX+2, fromY) != null) {
+                if (matrix[fromX + 2][fromY] != null) {
                     return false;
                 }
 
-                if (tablero.getespacio(fromX-2, fromY)!= null) {
+                if (matrix[fromX - 2][fromY] != null) {
                     return false;
                 }
-            }
 
-            //En passante
-            if (toY + 1 < 8) {
-                if (tablero.getespacio(toX, toY+1) != null) {
-                    if (tablero.getespacio(toX, toY+1) == null) {
-                        available = true;
+                //En passante
+                if (toY + 1 < 8) {
+                    if (matrix[toX][toY + 1] != null) {
+                        if (matrix[toX][toY + 1]==null) {
+                            available = true;
+                        }
+                    }
+                } else if (toY - 1 > 0) {
+                    if (matrix[toX][toY - 1] != null) {
+                        if (matrix[toX][toY - 1]==null) {
+                            available = true;
+                        }
                     }
                 }
-            } else if (toY - 1 > 0) {
-                if (tablero.getespacio(toX, toY-1) != null) {
-                    if (tablero.getespacio(toX, toY-1) == null) {
-                        available = true;
-                    }
-                }
+
             }
         } else {
             //Taking a piece
@@ -72,7 +74,7 @@ public class Peon extends Pieza {
                 return false;
             }
 
-            if (tablero.getespacio(toX, toY) == null) {
+            if (matrix[toX][toY] == null) {
                 /*if(newRow - 1 > 0){
                  if(newCol - 1 > 0){
                  if(board[newRow - 1][newCol - 1] != null){
@@ -87,6 +89,6 @@ public class Peon extends Pieza {
         }
 
         return true;
-    
+    }
 }
-}
+3

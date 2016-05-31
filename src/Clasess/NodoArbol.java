@@ -10,7 +10,7 @@ package Clasess;
  * @author jordi
  */
 public class NodoArbol {
-    String pieza;
+    ListaPiezas pieza;
     String[][] matriz_movimiento = new String[8][8];
     NodoArbol hermano;
     NodoArbol hijo;
@@ -19,17 +19,17 @@ public class NodoArbol {
     }
 
     
-    public NodoArbol(String[][] matriz_movimiento,String pieza) {
+    public NodoArbol(String[][] matriz_movimiento,ListaPiezas pieza) {
         this.pieza = pieza;
         hermano = null;
         hijo = null;
     }
 
-    public String getPieza() {
+    public ListaPiezas getPieza() {
         return pieza;
     }
 
-    public void setPieza(String pieza) {
+    public void setPieza(ListaPiezas pieza) {
         this.pieza = pieza;
     }
 
@@ -59,7 +59,7 @@ public class NodoArbol {
 
     @Override
     public String toString() {
-        return "NodoArbol{" + "pieza=" + pieza + ", matriz_movimiento=" + matriz_movimiento + ", hermano=" + hermano + ", hijo=" + hijo + '}';
+        return "NodoArbol{matriz_movimiento=" + matriz_movimiento + ", hermano=" + hermano + ", hijo=" + hijo + '}';
     }
 
     
