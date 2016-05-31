@@ -5,18 +5,18 @@
  */
 package Windows;
 
+import Clasess.Arbol;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import Clasess.Caballo;
+import Clasess.NodoRaiz;
 import Clasess.Peon;
 import Clasess.Pieza;
 import Clasess.Queen;
 import Clasess.Rey;
 import Clasess.Tablero;
-import Clasess.NodoArbol;
-import Clasess.Arbol;
 
 /**
  *
@@ -45,7 +45,11 @@ public class Main extends javax.swing.JFrame {
         lbl_peonNegro.setIcon(imageIcon6);
         ImageIcon imageIcon7 = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(78, 140, Image.SCALE_DEFAULT));
         lbl_reinaNegro.setIcon(imageIcon7);
-
+        for (int i = 0; i < matriz_inicial.length; i++) {
+            for (int j = 0; j < matriz_inicial.length - 1; j++) {
+                matriz_inicial[i][j] = " ";
+            }
+        }
     }
 
     /**
@@ -1519,6 +1523,12 @@ public class Main extends javax.swing.JFrame {
         cont_reinaNegro = 0;
         ///////////// limpiar la text area
         txta_movimiento.setText("");
+        //////////////// limpiar matriz
+        for (int i = 0; i < matriz_inicial.length; i++) {
+            for (int j = 0; j < matriz_inicial.length - 1; j++) {
+                matriz_inicial[i][j] = " ";
+            }
+        }
     }//GEN-LAST:event_btn_clearMouseClicked
 
     private void a1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_a1MouseClicked
@@ -1531,72 +1541,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea1 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImagea1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagea1 = true;
-            matriz_inicial[0][0]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea1 == false ) {
+            matriz_inicial[0][0] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagea1 = true;
-            matriz_inicial[0][0]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea1 == false ) {
+            matriz_inicial[0][0] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagea1 = true;
-            matriz_inicial[0][0]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea1 == false ) {
+            matriz_inicial[0][0] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagea1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagea1 = true;
-            matriz_inicial[0][0]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea1 == false ) {
+            matriz_inicial[0][0] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea1 =  true;
-            matriz_inicial[0][0]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagea1 == false ) {
+            hasImagea1 = true;
+            matriz_inicial[0][0] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagea1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagea1 = true;
-            matriz_inicial[0][0]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagea1 == false ) {
+            matriz_inicial[0][0] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagea1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagea1 = true;
-            matriz_inicial[0][0]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea1 == false ) {
+            matriz_inicial[0][0] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagea1 = true;
-            matriz_inicial[0][0]="reinan";
-        }else {
+            matriz_inicial[0][0] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a1MouseClicked
@@ -1631,72 +1641,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea2 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImagea2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a2.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagea2 = true;
-            matriz_inicial[1][0]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea2 == false ) {
+            matriz_inicial[1][0] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a2.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagea2 = true;
-            matriz_inicial[1][0]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea2 == false ) {
+            matriz_inicial[1][0] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a2.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagea2 = true;
-            matriz_inicial[1][0]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea2 == false ) {
+            matriz_inicial[1][0] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagea2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a2.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagea2 = true;
-            matriz_inicial[1][0]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea2 == false ) {
+            matriz_inicial[1][0] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a2.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea2 =  true;
-            matriz_inicial[1][0]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagea2 == false ) {
+            hasImagea2 = true;
+            matriz_inicial[1][0] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagea2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a2.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagea2 = true;
-            matriz_inicial[1][0]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagea2 == false ) {
+            matriz_inicial[1][0] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagea2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a2.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagea2 = true;
-            matriz_inicial[1][0]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea2 == false ) {
+            matriz_inicial[1][0] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a2.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagea2 = true;
-            matriz_inicial[1][0]="reinan";
-        }else {
+            matriz_inicial[1][0] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a2MouseClicked
@@ -1711,72 +1721,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea3 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImagea3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a3.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagea3 = true;
-            matriz_inicial[2][0]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea3 == false ) {
+            matriz_inicial[2][0] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a3.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagea3 = true;
-            matriz_inicial[2][0]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea3 == false ) {
+            matriz_inicial[2][0] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a3.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagea3 = true;
-            matriz_inicial[2][0]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea3 == false ) {
+            matriz_inicial[2][0] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagea3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a3.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagea3 = true;
-            matriz_inicial[2][0]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea3 == false ) {
+            matriz_inicial[2][0] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a3.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea3 =  true;
-            matriz_inicial[2][0]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagea3 == false ) {
+            hasImagea3 = true;
+            matriz_inicial[2][0] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagea3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a3.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagea3 = true;
-            matriz_inicial[2][0]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagea3 == false ) {
+            matriz_inicial[2][0] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagea3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a3.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagea3 = true;
-            matriz_inicial[2][0]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea3 == false ) {
+            matriz_inicial[2][0] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a3.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagea3 = true;
-            matriz_inicial[2][0]="reinan";
-        }else {
+            matriz_inicial[2][0] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a3MouseClicked
@@ -1791,72 +1801,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea4 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImagea4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a4.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagea4 = true;
-            matriz_inicial[3][0]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea4 == false ) {
+            matriz_inicial[3][0] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a4.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagea4 = true;
-            matriz_inicial[3][0]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea4 == false ) {
+            matriz_inicial[3][0] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a4.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagea4 = true;
-            matriz_inicial[3][0]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea4 == false ) {
+            matriz_inicial[3][0] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagea4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a4.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagea4 = true;
-            matriz_inicial[3][0]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea4 == false ) {
+            matriz_inicial[3][0] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a4.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea4 =  true;
-            matriz_inicial[3][0]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagea4 == false ) {
+            hasImagea4 = true;
+            matriz_inicial[3][0] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagea4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a4.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagea4 = true;
-            matriz_inicial[3][0]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagea4 == false ) {
+            matriz_inicial[3][0] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagea4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a4.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagea4 = true;
-            matriz_inicial[3][0]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea4 == false ) {
+            matriz_inicial[3][0] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a4.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagea4 = true;
-            matriz_inicial[3][0]="reinan";
-        }else {
+            matriz_inicial[3][0] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a4MouseClicked
@@ -1871,72 +1881,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea5 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImagea5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a5.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagea5 = true;
-            matriz_inicial[4][0]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea5 == false ) {
+            matriz_inicial[4][0] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a5.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagea5 = true;
-            matriz_inicial[4][0]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea5 == false ) {
+            matriz_inicial[4][0] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a5.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagea5 = true;
-            matriz_inicial[4][0]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea5 == false ) {
+            matriz_inicial[4][0] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagea5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a5.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagea5 = true;
-            matriz_inicial[4][0]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea5 == false ) {
+            matriz_inicial[4][0] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a5.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea5 =  true;
-            matriz_inicial[4][0]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagea5 == false ) {
+            hasImagea5 = true;
+            matriz_inicial[4][0] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagea5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a5.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagea5 = true;
-            matriz_inicial[4][0]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagea5 == false ) {
+            matriz_inicial[4][0] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagea5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a5.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagea5 = true;
-            matriz_inicial[4][0]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea5 == false ) {
+            matriz_inicial[4][0] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a5.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagea5 = true;
-            matriz_inicial[4][0]="reinan";
-        }else {
+            matriz_inicial[4][0] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a5MouseClicked
@@ -1951,72 +1961,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea6 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImagea6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a6.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagea6 = true;
-            matriz_inicial[5][0]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea6 == false ) {
+            matriz_inicial[5][0] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a6.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagea6 = true;
-            matriz_inicial[5][0]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea6 == false ) {
+            matriz_inicial[5][0] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a6.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagea6 = true;
-            matriz_inicial[5][0]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea6 == false ) {
+            matriz_inicial[5][0] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagea6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a6.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagea6 = true;
-            matriz_inicial[5][0]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea6 == false ) {
+            matriz_inicial[5][0] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a6.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea6 =  true;
-            matriz_inicial[5][0]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagea6 == false ) {
+            hasImagea6 = true;
+            matriz_inicial[5][0] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagea6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a6.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagea6 = true;
-            matriz_inicial[5][0]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagea6 == false ) {
+            matriz_inicial[5][0] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagea6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a6.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagea6 = true;
-            matriz_inicial[5][0]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea6 == false ) {
+            matriz_inicial[5][0] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a6.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagea6 = true;
-            matriz_inicial[5][0]="reinan";
-        }else {
+            matriz_inicial[5][0] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a6MouseClicked
@@ -2031,72 +2041,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea7 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImagea7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a7.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagea7 = true;
-            matriz_inicial[6][0]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea7 == false ) {
+            matriz_inicial[6][0] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a7.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagea7 = true;
-            matriz_inicial[6][0]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea7 == false ) {
+            matriz_inicial[6][0] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a7.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagea7 = true;
-            matriz_inicial[6][0]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea7 == false ) {
+            matriz_inicial[6][0] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagea7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a7.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagea7 = true;
-            matriz_inicial[6][0]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea7 == false ) {
+            matriz_inicial[6][0] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a7.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea7 =  true;
-            matriz_inicial[6][0]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagea7 == false ) {
+            hasImagea7 = true;
+            matriz_inicial[6][0] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagea7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a7.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagea7 = true;
-            matriz_inicial[6][0]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagea7 == false ) {
+            matriz_inicial[6][0] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagea7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a7.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagea7 = true;
-            matriz_inicial[6][0]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea7 == false ) {
+            matriz_inicial[6][0] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a7.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagea7 = true;
-            matriz_inicial[6][0]="reinan";
-        }else {
+            matriz_inicial[6][0] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a7MouseClicked
@@ -2111,72 +2121,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImagea8 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImagea8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a8.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagea8 = true;
-            matriz_inicial[7][0]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagea8 == false ) {
+            matriz_inicial[7][0] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagea8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a8.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagea8 = true;
-            matriz_inicial[7][0]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagea8 == false ) {
+            matriz_inicial[7][0] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagea8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a8.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagea8 = true;
-            matriz_inicial[7][0]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagea8 == false ) {
+            matriz_inicial[7][0] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagea8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a8.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagea8 = true;
-            matriz_inicial[7][0]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagea8 == false ) {
+            matriz_inicial[7][0] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagea8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a8.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagea8 =  true;
-            matriz_inicial[7][0]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagea8 == false ) {
+            hasImagea8 = true;
+            matriz_inicial[7][0] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagea8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a8.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagea8 = true;
-            matriz_inicial[7][0]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagea8 == false ) {
+            matriz_inicial[7][0] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagea8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagea8 = true;
-            matriz_inicial[7][0]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagea8 == false ) {
+            matriz_inicial[7][0] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagea8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             a8.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagea8 = true;
-            matriz_inicial[7][0]="reinan";
-        }else {
+            matriz_inicial[7][0] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_a8MouseClicked
@@ -2191,72 +2201,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImageb1 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImageb1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImageb1 = true;
-            matriz_inicial[0][1]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageb1 == false ) {
+            matriz_inicial[0][1] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImageb1 = true;
-            matriz_inicial[0][1]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageb1 == false ) {
+            matriz_inicial[0][1] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImageb1 = true;
-            matriz_inicial[0][1]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb1 == false ) {
+            matriz_inicial[0][1] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageb1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImageb1 = true;
-            matriz_inicial[0][1]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageb1 == false ) {
+            matriz_inicial[0][1] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageb1 =  true;
-            matriz_inicial[0][1]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageb1 == false ) {
+            hasImageb1 = true;
+            matriz_inicial[0][1] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImageb1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImageb1 = true;
-            matriz_inicial[0][1]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageb1 == false ) {
+            matriz_inicial[0][1] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImageb1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b1.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImageb1 = true;
-            matriz_inicial[0][1]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageb1 == false ) {
+            matriz_inicial[0][1] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImageb1 = true;
-            matriz_inicial[0][1]="reinan";
-        }else {
+            matriz_inicial[0][1] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_b1MouseClicked
@@ -2271,72 +2281,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImageb2 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImageb2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b2.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImageb2 = true;
-            matriz_inicial[1][1]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageb2 == false ) {
+            matriz_inicial[1][1] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b2.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImageb2 = true;
-            matriz_inicial[1][1]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageb2 == false ) {
+            matriz_inicial[1][1] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b2.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImageb2 = true;
-            matriz_inicial[1][1]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb2 == false ) {
+            matriz_inicial[1][1] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageb2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b2.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImageb2 = true;
-            matriz_inicial[1][1]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageb2 == false ) {
+            matriz_inicial[1][1] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b2.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageb2 =  true;
-            matriz_inicial[1][1]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageb2 == false ) {
+            hasImageb2 = true;
+            matriz_inicial[1][1] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImageb2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b2.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImageb2 = true;
-            matriz_inicial[1][1]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageb2 == false ) {
+            matriz_inicial[1][1] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImageb2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b2.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImageb2 = true;
-            matriz_inicial[1][1]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageb2 == false ) {
+            matriz_inicial[1][1] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b2.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImageb2 = true;
-            matriz_inicial[1][1]="reinan";
-        }else {
+            matriz_inicial[1][1] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_b2MouseClicked
@@ -2351,72 +2361,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImageb3 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImageb3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b3.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImageb3 = true;
-            matriz_inicial[2][1]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageb3 == false ) {
+            matriz_inicial[2][1] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b3.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImageb3 = true;
-            matriz_inicial[2][1]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageb3 == false ) {
+            matriz_inicial[2][1] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b3.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImageb3 = true;
-            matriz_inicial[2][1]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb3 == false ) {
+            matriz_inicial[2][1] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageb3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b3.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImageb3 = true;
-            matriz_inicial[2][1]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageb3 == false ) {
+            matriz_inicial[2][1] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b3.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageb3 =  true;
-            matriz_inicial[2][1]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageb3 == false ) {
+            hasImageb3 = true;
+            matriz_inicial[2][1] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImageb3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b3.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImageb3 = true;
-            matriz_inicial[2][1]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageb3 == false ) {
+            matriz_inicial[2][1] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImageb3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b3.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImageb3 = true;
-            matriz_inicial[2][1]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageb3 == false ) {
+            matriz_inicial[2][1] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b3.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImageb3 = true;
-            matriz_inicial[2][1]="reinan";
-        }else {
+            matriz_inicial[2][1] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_b3MouseClicked
@@ -2431,72 +2441,72 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        
-        if (lbl_caballoBlanco.isOpaque() && hasImageb4 == false ) {            
+
+        if (lbl_caballoBlanco.isOpaque() && hasImageb4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b4.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImageb4 = true;
-            matriz_inicial[3][1]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageb4 == false ) {
+            matriz_inicial[3][1] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b4.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImageb4 = true;
-            matriz_inicial[3][1]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageb4 == false ) {
+            matriz_inicial[3][1] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b4.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImageb4 = true;
-            matriz_inicial[3][1]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb4 == false ) {
+            matriz_inicial[3][1] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageb4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b4.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImageb4 = true;
-            matriz_inicial[3][1]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageb4 == false ) {
+            matriz_inicial[3][1] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b4.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageb4 =  true;
-            matriz_inicial[3][1]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageb4 == false ) {
+            hasImageb4 = true;
+            matriz_inicial[3][1] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImageb4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b4.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImageb4 = true;
-            matriz_inicial[3][1]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageb4 == false ) {
+            matriz_inicial[3][1] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImageb4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b4.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImageb4 = true;
-            matriz_inicial[3][1]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageb4 == false ) {
+            matriz_inicial[3][1] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b4.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImageb4 = true;
-            matriz_inicial[3][1]="reinan";
-        }else {
+            matriz_inicial[3][1] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_b4MouseClicked
@@ -2511,71 +2521,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageb5 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageb5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b5.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImageb5 = true;
-            matriz_inicial[4][1]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageb5 == false ) {
+            matriz_inicial[4][1] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b5.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImageb5 = true;
-            matriz_inicial[4][1]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageb5 == false ) {
+            matriz_inicial[4][1] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b5.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImageb5 = true;
-            matriz_inicial[4][1]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb5 == false ) {
+            matriz_inicial[4][1] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageb5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b5.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImageb5 = true;
-            matriz_inicial[4][1]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageb5 == false ) {
+            matriz_inicial[4][1] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b5.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageb5 =  true;
-            matriz_inicial[4][1]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageb5 == false ) {
+            hasImageb5 = true;
+            matriz_inicial[4][1] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImageb5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b5.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImageb5 = true;
-            matriz_inicial[4][1]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageb5 == false ) {
+            matriz_inicial[4][1] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImageb5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b5.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImageb5 = true;
-            matriz_inicial[4][1]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageb5 == false ) {
+            matriz_inicial[4][1] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b5.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImageb5 = true;
-            matriz_inicial[4][1]="reinan";
-        }else {
+            matriz_inicial[4][1] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_b5MouseClicked
@@ -2590,71 +2600,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageb6 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageb6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b6.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImageb6 = true;
-            matriz_inicial[5][1]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageb6 == false ) {
+            matriz_inicial[5][1] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b6.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImageb6 = true;
-            matriz_inicial[5][1]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageb6 == false ) {
+            matriz_inicial[5][1] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b6.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImageb6 = true;
-            matriz_inicial[5][1]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb6 == false ) {
+            matriz_inicial[5][1] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageb6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b6.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImageb6 = true;
-            matriz_inicial[5][1]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageb6 == false ) {
+            matriz_inicial[5][1] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b6.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageb6 =  true;
-            matriz_inicial[5][1]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageb6 == false ) {
+            hasImageb6 = true;
+            matriz_inicial[5][1] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImageb6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b6.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImageb6 = true;
-            matriz_inicial[5][1]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageb6 == false ) {
+            matriz_inicial[5][1] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImageb6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b6.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImageb6 = true;
-            matriz_inicial[5][1]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageb6 == false ) {
+            matriz_inicial[5][1] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b6.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImageb6 = true;
-            matriz_inicial[5][1]="reinan";
-        }else {
+            matriz_inicial[5][1] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_b6MouseClicked
@@ -2669,71 +2679,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageb7 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageb7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b7.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImageb7 = true;
-            matriz_inicial[6][1]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageb7 == false ) {
+            matriz_inicial[6][1] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b7.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImageb7 = true;
-            matriz_inicial[6][1]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageb7 == false ) {
+            matriz_inicial[6][1] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b7.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImageb7 = true;
-            matriz_inicial[6][1]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb7 == false ) {
+            matriz_inicial[6][1] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageb7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b7.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImageb7 = true;
-            matriz_inicial[6][1]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageb7 == false ) {
+            matriz_inicial[6][1] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b7.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageb7 =  true;
-            matriz_inicial[6][1]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageb7 == false ) {
+            hasImageb7 = true;
+            matriz_inicial[6][1] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImageb7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b7.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImageb7 = true;
-            matriz_inicial[6][1]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageb7 == false ) {
+            matriz_inicial[6][1] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImageb7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b7.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImageb7 = true;
-            matriz_inicial[6][1]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageb7 == false ) {
+            matriz_inicial[6][1] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b7.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImageb7 = true;
-            matriz_inicial[6][1]="reinan";
-        }else {
+            matriz_inicial[6][1] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_b7MouseClicked
@@ -2748,71 +2758,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageb8 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageb8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b8.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImageb8 = true;
-            matriz_inicial[7][1]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageb8 == false ) {
+            matriz_inicial[7][1] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImageb8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b8.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImageb8 = true;
-            matriz_inicial[7][1]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageb8 == false ) {
+            matriz_inicial[7][1] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImageb8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b8.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImageb8 = true;
-            matriz_inicial[7][1]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageb8 == false ) {
+            matriz_inicial[7][1] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageb8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b8.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImageb8 = true;
-            matriz_inicial[7][1]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageb8 == false ) {
+            matriz_inicial[7][1] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImageb8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b8.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageb8 =  true;
-            matriz_inicial[7][1]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageb8 == false ) {
+            hasImageb8 = true;
+            matriz_inicial[7][1] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImageb8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b8.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImageb8 = true;
-            matriz_inicial[7][1]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageb8 == false ) {
+            matriz_inicial[7][1] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImageb8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImageb8 = true;
-            matriz_inicial[7][1]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageb8 == false ) {
+            matriz_inicial[7][1] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImageb8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             b8.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImageb8 = true;
-            matriz_inicial[7][1]="reinan";
-        }else {
+            matriz_inicial[7][1] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_b8MouseClicked
@@ -2827,71 +2837,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagec1 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagec1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagec1 = true;
-            matriz_inicial[0][2]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagec1 == false ) {
+            matriz_inicial[0][2] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagec1 = true;
-            matriz_inicial[0][2]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagec1 == false ) {
+            matriz_inicial[0][2] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagec1 = true;
-            matriz_inicial[0][2]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec1 == false ) {
+            matriz_inicial[0][2] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagec1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagec1 = true;
-            matriz_inicial[0][2]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagec1 == false ) {
+            matriz_inicial[0][2] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagec1 =  true;
-            matriz_inicial[0][2]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagec1 == false ) {
+            hasImagec1 = true;
+            matriz_inicial[0][2] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagec1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagec1 = true;
-            matriz_inicial[0][2]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagec1 == false ) {
+            matriz_inicial[0][2] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagec1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c1.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagec1 = true;
-            matriz_inicial[0][2]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagec1 == false ) {
+            matriz_inicial[0][2] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagec1 = true;
-            matriz_inicial[0][2]="reinan";
-        }else {
+            matriz_inicial[0][2] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_c1MouseClicked
@@ -2906,71 +2916,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagec2 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagec2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c2.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagec2 = true;
-            matriz_inicial[1][2]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagec2 == false ) {
+            matriz_inicial[1][2] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c2.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagec2 = true;
-            matriz_inicial[1][2]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagec2 == false ) {
+            matriz_inicial[1][2] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c2.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagec2 = true;
-            matriz_inicial[1][2]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec2 == false ) {
+            matriz_inicial[1][2] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagec2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c2.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagec2 = true;
-            matriz_inicial[1][2]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagec2 == false ) {
+            matriz_inicial[1][2] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c2.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagec2 =  true;
-            matriz_inicial[1][2]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagec2 == false ) {
+            hasImagec2 = true;
+            matriz_inicial[1][2] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagec2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c2.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagec2 = true;
-            matriz_inicial[1][2]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagec2 == false ) {
+            matriz_inicial[1][2] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagec2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c2.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagec2 = true;
-            matriz_inicial[1][2]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagec2 == false ) {
+            matriz_inicial[1][2] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c2.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagec2 = true;
-            matriz_inicial[1][2]="reinan";
-        }else {
+            matriz_inicial[1][2] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_c2MouseClicked
@@ -2985,71 +2995,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagec3 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagec3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c3.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagec3 = true;
-            matriz_inicial[2][2]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagec3 == false ) {
+            matriz_inicial[2][2] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c3.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagec3 = true;
-            matriz_inicial[2][2]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagec3 == false ) {
+            matriz_inicial[2][2] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c3.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagec3 = true;
-            matriz_inicial[2][2]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec3 == false ) {
+            matriz_inicial[2][2] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagec3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c3.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagec3 = true;
-            matriz_inicial[2][2]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagec3 == false ) {
+            matriz_inicial[2][2] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c3.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagec3 =  true;
-            matriz_inicial[2][2]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagec3 == false ) {
+            hasImagec3 = true;
+            matriz_inicial[2][2] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagec3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c3.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagec3 = true;
-            matriz_inicial[2][2]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagec3 == false ) {
+            matriz_inicial[2][2] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagec3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c3.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagec3 = true;
-            matriz_inicial[2][2]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagec3 == false ) {
+            matriz_inicial[2][2] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c3.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagec3 = true;
-            matriz_inicial[2][2]="reinan";
-        }else {
+            matriz_inicial[2][2] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_c3MouseClicked
@@ -3064,71 +3074,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagec4 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagec4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c4.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagec4 = true;
-            matriz_inicial[3][2]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagec4 == false ) {
+            matriz_inicial[3][2] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c4.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagec4 = true;
-            matriz_inicial[3][2]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagec4 == false ) {
+            matriz_inicial[3][2] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c4.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagec4 = true;
-            matriz_inicial[3][2]="peonb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec4 == false ) {
+            matriz_inicial[3][2] = "peonb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagec4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c4.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagec4 = true;
-            matriz_inicial[3][2]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagec4 == false ) {
+            matriz_inicial[3][2] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c4.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagec4 =  true;
-            matriz_inicial[3][2]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagec4 == false ) {
+            hasImagec4 = true;
+            matriz_inicial[3][2] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagec4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c4.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagec4 = true;
-            matriz_inicial[3][2]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagec4 == false ) {
+            matriz_inicial[3][2] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagec4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c4.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagec4 = true;
-            matriz_inicial[3][2]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagec4 == false ) {
+            matriz_inicial[3][2] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c4.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagec4 = true;
-            matriz_inicial[3][2]="reinan";
-        }else {
+            matriz_inicial[3][2] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_c4MouseClicked
@@ -3143,71 +3153,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagec5 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagec5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c5.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagec5 = true;
-            matriz_inicial[4][2]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagec5 == false ) {
+            matriz_inicial[4][2] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c5.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagec5 = true;
-            matriz_inicial[4][2]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagec5 == false ) {
+            matriz_inicial[4][2] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c5.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagec5 = true;
-            matriz_inicial[4][2]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec5 == false ) {
+            matriz_inicial[4][2] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagec5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c5.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagec5 = true;
-            matriz_inicial[4][2]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagec5 == false ) {
+            matriz_inicial[4][2] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c5.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagec5 =  true;
-            matriz_inicial[4][2]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagec5 == false ) {
+            hasImagec5 = true;
+            matriz_inicial[4][2] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagec5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c5.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagec5 = true;
-            matriz_inicial[4][2]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagec5 == false ) {
+            matriz_inicial[4][2] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagec5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c5.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagec5 = true;
-            matriz_inicial[4][2]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagec5 == false ) {
+            matriz_inicial[4][2] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c5.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagec5 = true;
-            matriz_inicial[4][2]="reinan";
-        }else {
+            matriz_inicial[4][2] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_c5MouseClicked
@@ -3222,71 +3232,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagec6 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagec6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c6.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagec6 = true;
-            matriz_inicial[5][2]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagec6 == false ) {
+            matriz_inicial[5][2] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c6.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagec6 = true;
-            matriz_inicial[5][2]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagec6 == false ) {
+            matriz_inicial[5][2] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c6.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagec6 = true;
-            matriz_inicial[5][2]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec6 == false ) {
+            matriz_inicial[5][2] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagec6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c6.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagec6 = true;
-            matriz_inicial[5][2]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagec6 == false ) {
+            matriz_inicial[5][2] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c6.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagec6 =  true;
-            matriz_inicial[5][2]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagec6 == false ) {
+            hasImagec6 = true;
+            matriz_inicial[5][2] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagec6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c6.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagec6 = true;
-            matriz_inicial[5][2]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagec6 == false ) {
+            matriz_inicial[5][2] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagec6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c6.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagec6 = true;
-            matriz_inicial[5][2]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagec6 == false ) {
+            matriz_inicial[5][2] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c6.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagec6 = true;
-            matriz_inicial[5][2]="reinan";
-        }else {
+            matriz_inicial[5][2] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_c6MouseClicked
@@ -3301,71 +3311,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagec7 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagec7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c7.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagec7 = true;
-            matriz_inicial[6][2]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagec7 == false ) {
+            matriz_inicial[6][2] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c7.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagec7 = true;
-            matriz_inicial[6][2]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagec7 == false ) {
+            matriz_inicial[6][2] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c7.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagec7 = true;
-            matriz_inicial[6][2]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec7 == false ) {
+            matriz_inicial[6][2] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagec7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c7.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagec7 = true;
-            matriz_inicial[6][2]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagec7 == false ) {
+            matriz_inicial[6][2] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c7.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagec7 =  true;
-            matriz_inicial[6][2]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagec7 == false ) {
+            hasImagec7 = true;
+            matriz_inicial[6][2] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagec7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c7.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagec7 = true;
-            matriz_inicial[6][2]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagec7 == false ) {
+            matriz_inicial[6][2] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagec7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c7.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagec7 = true;
-            matriz_inicial[6][2]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagec7 == false ) {
+            matriz_inicial[6][2] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c7.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagec7 = true;
-            matriz_inicial[6][2]="reinan";
-        }else {
+            matriz_inicial[6][2] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_c7MouseClicked
@@ -3380,71 +3390,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagec8 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagec8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c8.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImagec8 = true;
-            matriz_inicial[7][2]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagec8 == false ) {
+            matriz_inicial[7][2] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImagec8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c8.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImagec8 = true;
-            matriz_inicial[7][2]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagec8 == false ) {
+            matriz_inicial[7][2] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImagec8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c8.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImagec8 = true;
-            matriz_inicial[7][2]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagec8 == false ) {
+            matriz_inicial[7][2] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagec8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c8.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImagec8 = true;
-            matriz_inicial[7][2]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagec8 == false ) {
+            matriz_inicial[7][2] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImagec8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c8.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagec8 =  true;
-            matriz_inicial[7][2]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagec8 == false ) {
+            hasImagec8 = true;
+            matriz_inicial[7][2] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImagec8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c8.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImagec8 = true;
-            matriz_inicial[7][2]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagec8 == false ) {
+            matriz_inicial[7][2] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImagec8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImagec8 = true;
-            matriz_inicial[7][2]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagec8 == false ) {
+            matriz_inicial[7][2] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImagec8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             c8.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImagec8 = true;
-            matriz_inicial[7][2]="reinan";
-        }else {
+            matriz_inicial[7][2] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_c8MouseClicked
@@ -3459,71 +3469,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImaged1 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImaged1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImaged1 = true;
-            matriz_inicial[0][3]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImaged1 == false ) {
+            matriz_inicial[0][3] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImaged1 = true;
-            matriz_inicial[0][3]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImaged1 == false ) {
+            matriz_inicial[0][3] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImaged1 = true;
-            matriz_inicial[0][3]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged1 == false ) {
+            matriz_inicial[0][3] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImaged1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImaged1 = true;
-            matriz_inicial[0][3]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged1 == false ) {
+            matriz_inicial[0][3] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImaged1 =  true;
-            matriz_inicial[0][3]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImaged1 == false ) {
+            hasImaged1 = true;
+            matriz_inicial[0][3] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImaged1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImaged1 = true;
-            matriz_inicial[0][3]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImaged1 == false ) {
+            matriz_inicial[0][3] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImaged1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d1.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImaged1 = true;
-            matriz_inicial[0][3]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImaged1 == false ) {
+            matriz_inicial[0][3] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImaged1 = true;
-            matriz_inicial[0][3]="reinan";
-        }else {
+            matriz_inicial[0][3] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_d1MouseClicked
@@ -3538,71 +3548,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImaged2 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImaged2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d2.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImaged2 = true;
-            matriz_inicial[1][3]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImaged2 == false ) {
+            matriz_inicial[1][3] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d2.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImaged2 = true;
-            matriz_inicial[1][3]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImaged2 == false ) {
+            matriz_inicial[1][3] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d2.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImaged2 = true;
-            matriz_inicial[1][3]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged2 == false ) {
+            matriz_inicial[1][3] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImaged2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d2.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImaged2 = true;
-            matriz_inicial[1][3]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged2 == false ) {
+            matriz_inicial[1][3] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d2.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImaged2 =  true;
-            matriz_inicial[1][3]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImaged2 == false ) {
+            hasImaged2 = true;
+            matriz_inicial[1][3] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImaged2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d2.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImaged2 = true;
-            matriz_inicial[1][3]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImaged2 == false ) {
+            matriz_inicial[1][3] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImaged2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d2.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImaged2 = true;
-            matriz_inicial[1][3]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImaged2 == false ) {
+            matriz_inicial[1][3] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d2.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImaged2 = true;
-            matriz_inicial[1][3]="reinan";
-        }else {
+            matriz_inicial[1][3] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_d2MouseClicked
@@ -3617,71 +3627,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImaged3 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImaged3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d3.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImaged3 = true;
-            matriz_inicial[2][3]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImaged3 == false ) {
+            matriz_inicial[2][3] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d3.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImaged3 = true;
-            matriz_inicial[2][3]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImaged3 == false ) {
+            matriz_inicial[2][3] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d3.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImaged3 = true;
-            matriz_inicial[2][3]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged3 == false ) {
+            matriz_inicial[2][3] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImaged3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d3.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImaged3 = true;
-            matriz_inicial[2][3]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged3 == false ) {
+            matriz_inicial[2][3] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d3.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImaged3 =  true;
-            matriz_inicial[2][3]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImaged3 == false ) {
+            hasImaged3 = true;
+            matriz_inicial[2][3] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImaged3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d3.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImaged3 = true;
-            matriz_inicial[2][3]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImaged3 == false ) {
+            matriz_inicial[2][3] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImaged3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d3.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImaged3 = true;
-            matriz_inicial[2][3]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImaged3 == false ) {
+            matriz_inicial[2][3] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d3.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImaged3 = true;
-            matriz_inicial[2][3]="reinan";
-        }else {
+            matriz_inicial[2][3] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_d3MouseClicked
@@ -3696,71 +3706,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImaged4 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImaged4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d4.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImaged4 = true;
-            matriz_inicial[3][3]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImaged4 == false ) {
+            matriz_inicial[3][3] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d4.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImaged4 = true;
-            matriz_inicial[3][3]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImaged4 == false ) {
+            matriz_inicial[3][3] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d4.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImaged4 = true;
-            matriz_inicial[3][3]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged4 == false ) {
+            matriz_inicial[3][3] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImaged4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d4.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImaged4 = true;
-            matriz_inicial[3][3]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged4 == false ) {
+            matriz_inicial[3][3] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d4.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImaged4 =  true;
-            matriz_inicial[3][3]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImaged4 == false ) {
+            hasImaged4 = true;
+            matriz_inicial[3][3] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImaged4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d4.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImaged4 = true;
-            matriz_inicial[3][3]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImaged4 == false ) {
+            matriz_inicial[3][3] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImaged4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d4.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImaged4 = true;
-            matriz_inicial[3][3]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImaged4 == false ) {
+            matriz_inicial[3][3] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d4.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImaged4 = true;
-            matriz_inicial[3][3]="reinan";
-        }else {
+            matriz_inicial[3][3] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_d4MouseClicked
@@ -3775,71 +3785,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImaged5 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImaged5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d5.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImaged5 = true;
-            matriz_inicial[4][3]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImaged5 == false ) {
+            matriz_inicial[4][3] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d5.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImaged5 = true;
-            matriz_inicial[4][3]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImaged5 == false ) {
+            matriz_inicial[4][3] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d5.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImaged5 = true;
-            matriz_inicial[4][3]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged5 == false ) {
+            matriz_inicial[4][3] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImaged5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d5.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImaged5 = true;
-            matriz_inicial[4][3]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged5 == false ) {
+            matriz_inicial[4][3] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d5.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImaged5 =  true;
-            matriz_inicial[4][3]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImaged5 == false ) {
+            hasImaged5 = true;
+            matriz_inicial[4][3] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImaged5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d5.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImaged5 = true;
-            matriz_inicial[4][3]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImaged5 == false ) {
+            matriz_inicial[4][3] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImaged5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d5.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImaged5 = true;
-            matriz_inicial[4][3]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImaged5 == false ) {
+            matriz_inicial[4][3] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d5.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImaged5 = true;
-            matriz_inicial[4][3]="reinan";
-        }else {
+            matriz_inicial[4][3] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_d5MouseClicked
@@ -3854,71 +3864,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImaged6 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImaged6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d6.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImaged6 = true;
-            matriz_inicial[5][3]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImaged6 == false ) {
+            matriz_inicial[5][3] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d6.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImaged6 = true;
-            matriz_inicial[5][3]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImaged6 == false ) {
+            matriz_inicial[5][3] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d6.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImaged6 = true;
-            matriz_inicial[5][3]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged6 == false ) {
+            matriz_inicial[5][3] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImaged6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d6.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImaged6 = true;
-            matriz_inicial[5][3]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged6 == false ) {
+            matriz_inicial[5][3] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d6.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImaged6 =  true;
-            matriz_inicial[5][3]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImaged6 == false ) {
+            hasImaged6 = true;
+            matriz_inicial[5][3] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImaged6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d6.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImaged6 = true;
-            matriz_inicial[5][3]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImaged6 == false ) {
+            matriz_inicial[5][3] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImaged6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d6.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImaged6 = true;
-            matriz_inicial[5][3]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImaged6 == false ) {
+            matriz_inicial[5][3] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d6.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImaged6 = true;
-            matriz_inicial[5][3]="reinan";
-        }else {
+            matriz_inicial[5][3] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_d6MouseClicked
@@ -3933,71 +3943,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImaged7 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImaged7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d7.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImaged7 = true;
-            matriz_inicial[6][3]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImaged7 == false ) {
+            matriz_inicial[6][3] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d7.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImaged7 = true;
-            matriz_inicial[6][3]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImaged7 == false ) {
+            matriz_inicial[6][3] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d7.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImaged7 = true;
-            matriz_inicial[6][3]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged7 == false ) {
+            matriz_inicial[6][3] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImaged7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d7.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImaged7 = true;
-            matriz_inicial[6][3]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged7 == false ) {
+            matriz_inicial[6][3] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d7.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImaged7 =  true;
-            matriz_inicial[6][3]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImaged7 == false ) {
+            hasImaged7 = true;
+            matriz_inicial[6][3] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImaged7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d7.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImaged7 = true;
-            matriz_inicial[6][3]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImaged7 == false ) {
+            matriz_inicial[6][3] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImaged7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d7.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImaged7 = true;
-            matriz_inicial[6][3]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImaged7 == false ) {
+            matriz_inicial[6][3] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d7.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImaged7 = true;
-            matriz_inicial[6][3]="reinan";
-        }else {
+            matriz_inicial[6][3] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_d7MouseClicked
@@ -4012,71 +4022,71 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImaged8 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
             lbl_caballoBlanco.setBackground(Color.gray);
             cont_caballoBlanco++;
             hasImaged8 = true;
-            matriz_inicial[7][3]="cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImaged8 == false ) {
+            matriz_inicial[7][3] = "cb";
+        } else if (lbl_reyBlanco.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
             lbl_reyBlanco.setBackground(Color.gray);
             cont_reyBlanco++;
             hasImaged8 = true;
-            matriz_inicial[7][3]="reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImaged8 == false ) {
+            matriz_inicial[7][3] = "reyb";
+        } else if (lbl_peonBlanco.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
             lbl_peonBlanco.setBackground(Color.gray);
             cont_peonBlanco++;
             hasImaged8 = true;
-            matriz_inicial[7][3]="pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImaged8 == false ) {
+            matriz_inicial[7][3] = "pb";
+        } else if (lbl_reinaBlanco.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
             lbl_reinaBlanco.setBackground(Color.gray);
             cont_reinaBlanco++;
             hasImaged8 = true;
-            matriz_inicial[7][3]="reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged8 == false ) {
+            matriz_inicial[7][3] = "reinab";
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImaged8 =  true;
-            matriz_inicial[7][3]="cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImaged8 == false ) {
+            hasImaged8 = true;
+            matriz_inicial[7][3] = "cn";
+        } else if (lbl_reyNegro.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
             lbl_reyNegro.setBackground(Color.gray);
             cont_reyNegro++;
             hasImaged8 = true;
-            matriz_inicial[7][3]="reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImaged8 == false ) {
+            matriz_inicial[7][3] = "reyn";
+        } else if (lbl_peonNegro.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
             lbl_peonNegro.setBackground(Color.gray);
             cont_peonNegro++;
             hasImaged8 = true;
-            matriz_inicial[7][3]="pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImaged8 == false ) {
+            matriz_inicial[7][3] = "pn";
+        } else if (lbl_reinaNegro.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
             lbl_reinaNegro.setBackground(Color.gray);
             cont_reinaNegro++;
             hasImaged8 = true;
-            matriz_inicial[7][3]="reinan";
-        }else {
+            matriz_inicial[7][3] = "reinan";
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_d8MouseClicked
@@ -4091,7 +4101,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagee1 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagee1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4099,7 +4109,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagee1 = true;
             matriz_inicial[0][4] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagee1 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagee1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4107,7 +4117,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagee1 = true;
             matriz_inicial[0][4] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagee1 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagee1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4115,7 +4125,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagee1 = true;
             matriz_inicial[0][4] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagee1 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagee1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4123,15 +4133,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagee1 = true;
             matriz_inicial[0][4] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagee1 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagee1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagee1 =  true;
+            hasImagee1 = true;
             matriz_inicial[0][4] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagee1 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagee1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4139,7 +4149,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagee1 = true;
             matriz_inicial[0][4] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagee1 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagee1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             d8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4147,7 +4157,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagee1 = true;
             matriz_inicial[0][4] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagee1 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagee1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4155,7 +4165,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagee1 = true;
             matriz_inicial[0][4] = "reinann";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_e1MouseClicked
@@ -4170,7 +4180,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagee2 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagee2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e2.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4178,7 +4188,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagee2 = true;
             matriz_inicial[1][4] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagee2 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagee2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e2.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4186,7 +4196,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagee2 = true;
             matriz_inicial[1][4] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagee2 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagee2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e2.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4194,7 +4204,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagee2 = true;
             matriz_inicial[1][4] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagee2 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagee2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e2.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4202,15 +4212,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagee2 = true;
             matriz_inicial[1][4] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagee2 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagee2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e2.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagee2 =  true;
+            hasImagee2 = true;
             matriz_inicial[1][4] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagee2 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagee2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e2.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4218,7 +4228,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagee2 = true;
             matriz_inicial[1][4] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagee2 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagee2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e2.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4226,7 +4236,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagee2 = true;
             matriz_inicial[1][4] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagee2 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagee2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e2.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4234,7 +4244,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagee2 = true;
             matriz_inicial[1][4] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_e2MouseClicked
@@ -4249,7 +4259,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagee3 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagee3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e3.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4257,7 +4267,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagee3 = true;
             matriz_inicial[2][4] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagee3 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagee3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e3.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4265,7 +4275,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagee3 = true;
             matriz_inicial[2][4] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagee3 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagee3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e3.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4273,7 +4283,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagee3 = true;
             matriz_inicial[2][4] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagee3 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagee3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e3.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4281,15 +4291,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagee3 = true;
             matriz_inicial[2][4] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagee3 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagee3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e3.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagee3 =  true;
+            hasImagee3 = true;
             matriz_inicial[2][4] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagee3 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagee3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e3.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4297,7 +4307,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagee3 = true;
             matriz_inicial[2][4] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagee3 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagee3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e3.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4305,7 +4315,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagee3 = true;
             matriz_inicial[2][4] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagee3 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagee3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e3.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4313,7 +4323,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagee3 = true;
             matriz_inicial[2][4] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_e3MouseClicked
@@ -4328,7 +4338,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagee4 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagee4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e4.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4336,7 +4346,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagee4 = true;
             matriz_inicial[3][4] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagee4 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagee4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e4.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4344,7 +4354,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagee4 = true;
             matriz_inicial[3][4] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagee4 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagee4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e4.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4352,7 +4362,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagee4 = true;
             matriz_inicial[3][4] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagee4 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagee4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e4.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4360,15 +4370,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagee4 = true;
             matriz_inicial[3][4] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagee4 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagee4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e4.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagee4 =  true;
+            hasImagee4 = true;
             matriz_inicial[3][4] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagee4 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagee4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e4.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4376,7 +4386,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagee4 = true;
             matriz_inicial[3][4] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagee4 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagee4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e4.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4384,7 +4394,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagee4 = true;
             matriz_inicial[3][4] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagee4 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagee4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e4.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4392,7 +4402,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagee4 = true;
             matriz_inicial[3][4] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_e4MouseClicked
@@ -4407,7 +4417,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagee5 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagee5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e5.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4415,7 +4425,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagee5 = true;
             matriz_inicial[4][4] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagee5 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagee5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e5.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4423,7 +4433,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagee5 = true;
             matriz_inicial[4][4] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagee5 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagee5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e5.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4431,7 +4441,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagee5 = true;
             matriz_inicial[4][4] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagee5 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagee5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e5.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4439,15 +4449,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagee5 = true;
             matriz_inicial[4][4] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagee5 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagee5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e5.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagee5 =  true;
+            hasImagee5 = true;
             matriz_inicial[4][4] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagee5 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagee5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e5.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4455,7 +4465,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagee5 = true;
             matriz_inicial[4][4] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagee5 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagee5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e5.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4463,7 +4473,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagee5 = true;
             matriz_inicial[4][4] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagee5 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagee5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e5.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4471,7 +4481,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagee5 = true;
             matriz_inicial[4][4] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_e5MouseClicked
@@ -4486,7 +4496,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagee6 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagee6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e6.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4494,7 +4504,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagee6 = true;
             matriz_inicial[5][4] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagee6 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagee6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e6.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4502,7 +4512,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagee6 = true;
             matriz_inicial[5][4] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagee6 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagee6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e6.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4510,7 +4520,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagee6 = true;
             matriz_inicial[5][4] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagee6 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagee6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e6.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4518,15 +4528,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagee6 = true;
             matriz_inicial[5][4] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagee6 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagee6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e6.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagee6 =  true;
+            hasImagee6 = true;
             matriz_inicial[5][4] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagee6 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagee6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e6.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4534,7 +4544,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagee6 = true;
             matriz_inicial[5][4] = "reyb";
-        } else if (lbl_peonNegro.isOpaque() && hasImagee6 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagee6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e6.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4542,7 +4552,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagee6 = true;
             matriz_inicial[5][4] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagee6 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagee6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e6.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4550,7 +4560,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagee6 = true;
             matriz_inicial[5][4] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_e6MouseClicked
@@ -4565,7 +4575,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagee7 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagee7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e7.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4573,7 +4583,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagee7 = true;
             matriz_inicial[6][4] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagee7 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagee7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e7.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4581,7 +4591,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagee7 = true;
             matriz_inicial[6][4] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagee7 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagee7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e7.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4589,7 +4599,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagee7 = true;
             matriz_inicial[6][4] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagee7 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagee7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e7.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4597,15 +4607,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagee7 = true;
             matriz_inicial[6][4] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagee7 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagee7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e7.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagee7 =  true;
+            hasImagee7 = true;
             matriz_inicial[6][4] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagee7 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagee7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e7.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4613,7 +4623,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagee7 = true;
             matriz_inicial[6][4] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagee7 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagee7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e7.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4621,7 +4631,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagee7 = true;
             matriz_inicial[6][4] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagee7 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagee7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e7.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4629,7 +4639,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagee7 = true;
             matriz_inicial[6][4] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_e7MouseClicked
@@ -4644,7 +4654,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagee8 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagee8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e8.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4652,7 +4662,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagee8 = true;
             matriz_inicial[7][4] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagee8 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagee8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e8.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4660,7 +4670,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagee8 = true;
             matriz_inicial[7][4] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagee8 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagee8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e8.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4668,7 +4678,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagee8 = true;
             matriz_inicial[7][4] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagee8 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagee8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e8.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4676,15 +4686,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagee8 = true;
             matriz_inicial[7][4] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagee8 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagee8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e8.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagee8 =  true;
+            hasImagee8 = true;
             matriz_inicial[7][4] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagee8 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagee8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e8.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4692,7 +4702,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagee8 = true;
             matriz_inicial[7][4] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagee8 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagee8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4700,7 +4710,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagee8 = true;
             matriz_inicial[7][4] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagee8 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagee8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             e8.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4708,7 +4718,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagee8 = true;
             matriz_inicial[7][4] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_e8MouseClicked
@@ -4723,7 +4733,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagef1 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagef1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4731,7 +4741,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagef1 = true;
             matriz_inicial[0][5] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagef1 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagef1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4739,7 +4749,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagef1 = true;
             matriz_inicial[0][5] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagef1 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagef1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4747,7 +4757,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagef1 = true;
             matriz_inicial[0][5] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagef1 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagef1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4755,15 +4765,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagef1 = true;
             matriz_inicial[0][5] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagef1 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagef1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagef1 =  true;
+            hasImagef1 = true;
             matriz_inicial[0][5] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagef1 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagef1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4771,7 +4781,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagef1 = true;
             matriz_inicial[0][5] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagef1 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagef1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f1.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4779,7 +4789,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagef1 = true;
             matriz_inicial[0][5] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagef1 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagef1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4787,7 +4797,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagef1 = true;
             matriz_inicial[0][5] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_f1MouseClicked
@@ -4802,7 +4812,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagef2 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagef2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f2.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4810,7 +4820,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagef2 = true;
             matriz_inicial[1][5] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagef2 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagef2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f2.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4818,7 +4828,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagef2 = true;
             matriz_inicial[1][5] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagef2 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagef2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f2.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4826,7 +4836,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagef2 = true;
             matriz_inicial[1][5] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagef2 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagef2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f2.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4834,15 +4844,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagef2 = true;
             matriz_inicial[1][5] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagef2 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagef2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f2.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagef2 =  true;
+            hasImagef2 = true;
             matriz_inicial[1][5] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagef2 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagef2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f2.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4850,7 +4860,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagef2 = true;
             matriz_inicial[1][5] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagef2 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagef2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f2.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4858,7 +4868,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagef2 = true;
             matriz_inicial[1][5] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagef2 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagef2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f2.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4866,7 +4876,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagef2 = true;
             matriz_inicial[1][5] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_f2MouseClicked
@@ -4881,7 +4891,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagef3 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagef3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f3.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4889,7 +4899,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagef3 = true;
             matriz_inicial[2][5] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagef3 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagef3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f3.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4897,7 +4907,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagef3 = true;
             matriz_inicial[2][5] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagef3 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagef3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f3.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4905,7 +4915,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagef3 = true;
             matriz_inicial[2][5] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagef3 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagef3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f3.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4913,15 +4923,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagef3 = true;
             matriz_inicial[2][5] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagef3 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagef3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f3.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagef3 =  true;
+            hasImagef3 = true;
             matriz_inicial[2][5] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagef3 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagef3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f3.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -4929,7 +4939,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagef3 = true;
             matriz_inicial[2][5] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagef3 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagef3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f3.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -4937,7 +4947,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagef3 = true;
             matriz_inicial[2][5] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagef3 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagef3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f3.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -4945,7 +4955,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagef3 = true;
             matriz_inicial[2][5] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_f3MouseClicked
@@ -4960,7 +4970,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagef4 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagef4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f4.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -4968,7 +4978,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagef4 = true;
             matriz_inicial[3][5] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagef4 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagef4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f4.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -4976,7 +4986,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagef4 = true;
             matriz_inicial[3][5] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagef4 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagef4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f4.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -4984,7 +4994,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagef4 = true;
             matriz_inicial[3][5] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagef4 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagef4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f4.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -4992,15 +5002,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagef4 = true;
             matriz_inicial[3][5] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImaged8 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImaged8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f4.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagef4 =  true;
+            hasImagef4 = true;
             matriz_inicial[3][5] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagef4 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagef4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f4.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5008,7 +5018,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagef4 = true;
             matriz_inicial[3][5] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagef4 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagef4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f4.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5016,7 +5026,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagef4 = true;
             matriz_inicial[3][5] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagef4 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagef4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f4.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5024,7 +5034,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagef4 = true;
             matriz_inicial[3][5] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_f4MouseClicked
@@ -5039,7 +5049,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagef5 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagef5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f5.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5047,7 +5057,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagef5 = true;
             matriz_inicial[4][5] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagef5 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagef5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f5.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5055,7 +5065,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagef5 = true;
             matriz_inicial[4][5] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagef5 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagef5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f5.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5063,7 +5073,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagef5 = true;
             matriz_inicial[4][5] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagef5 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagef5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f5.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5071,15 +5081,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagef5 = true;
             matriz_inicial[4][5] = "reinan";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagef5 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagef5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f5.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagef5=  true;
+            hasImagef5 = true;
             matriz_inicial[4][5] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagef5 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagef5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f5.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5087,7 +5097,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagef5 = true;
             matriz_inicial[4][5] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagef5 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagef5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f5.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5095,7 +5105,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagef5 = true;
             matriz_inicial[4][5] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagef5 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagef5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f5.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5103,7 +5113,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagef5 = true;
             matriz_inicial[4][5] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_f5MouseClicked
@@ -5118,7 +5128,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagef6 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagef6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f6.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5126,7 +5136,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagef6 = true;
             matriz_inicial[5][5] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagef6 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagef6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f6.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5134,7 +5144,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagef6 = true;
             matriz_inicial[5][5] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagef6 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagef6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f6.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5142,7 +5152,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagef6 = true;
             matriz_inicial[5][5] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagef6 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagef6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f6.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5150,15 +5160,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagef6 = true;
             matriz_inicial[5][5] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagef6 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagef6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f6.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagef6 =  true;
+            hasImagef6 = true;
             matriz_inicial[5][5] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagef6 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagef6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f6.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5166,7 +5176,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagef6 = true;
             matriz_inicial[5][5] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagef6 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagef6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f6.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5174,7 +5184,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagef6 = true;
             matriz_inicial[5][5] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagef6 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagef6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f6.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5182,7 +5192,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagef6 = true;
             matriz_inicial[5][5] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_f6MouseClicked
@@ -5197,7 +5207,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagef7 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagef7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f7.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5205,7 +5215,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagef7 = true;
             matriz_inicial[6][5] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagef7 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagef7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f7.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5213,7 +5223,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagef7 = true;
             matriz_inicial[6][5] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagef7 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagef7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f7.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5221,7 +5231,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagef7 = true;
             matriz_inicial[6][5] = "pn";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagef7 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagef7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f7.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5229,15 +5239,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagef7 = true;
             matriz_inicial[6][5] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagef7 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagef7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f7.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagef7 =  true;
+            hasImagef7 = true;
             matriz_inicial[6][5] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagef7 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagef7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f7.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5245,7 +5255,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagef7 = true;
             matriz_inicial[6][5] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagef7 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagef7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f7.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5253,7 +5263,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagef7 = true;
             matriz_inicial[6][5] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagef7 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagef7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f7.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5261,7 +5271,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagef7 = true;
             matriz_inicial[6][5] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_f7MouseClicked
@@ -5276,7 +5286,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImagef8 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImagef8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f8.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5284,7 +5294,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImagef8 = true;
             matriz_inicial[7][5] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImagef8 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImagef8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f8.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5292,7 +5302,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImagef8 = true;
             matriz_inicial[7][5] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImagef8 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImagef8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f8.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5300,7 +5310,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImagef8 = true;
             matriz_inicial[7][5] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImagef8 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImagef8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f8.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5308,15 +5318,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImagef8 = true;
             matriz_inicial[7][5] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImagef8 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImagef8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f8.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImagef8 =  true;
+            hasImagef8 = true;
             matriz_inicial[7][5] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImagef8 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImagef8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f8.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5324,7 +5334,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImagef8 = true;
             matriz_inicial[7][5] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImagef8 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImagef8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5332,7 +5342,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImagef8 = true;
             matriz_inicial[7][5] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImagef8 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImagef8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             f8.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5340,7 +5350,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImagef8 = true;
             matriz_inicial[7][5] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_f8MouseClicked
@@ -5355,7 +5365,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageg1 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageg1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5363,7 +5373,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageg1 = true;
             matriz_inicial[0][6] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageg1 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageg1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5371,7 +5381,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageg1 = true;
             matriz_inicial[0][6] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageg1 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageg1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5379,7 +5389,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageg1 = true;
             matriz_inicial[0][6] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageg1 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageg1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5387,15 +5397,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageg1 = true;
             matriz_inicial[0][6] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageg1 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageg1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageg1 =  true;
+            hasImageg1 = true;
             matriz_inicial[0][6] = "cb";
-        } else if (lbl_reyNegro.isOpaque() && hasImageg1 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageg1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5403,7 +5413,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageg1 = true;
             matriz_inicial[0][6] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageg1 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageg1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g1.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5411,7 +5421,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageg1 = true;
             matriz_inicial[0][6] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageg1 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageg1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5419,7 +5429,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageg1 = true;
             matriz_inicial[0][6] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_g1MouseClicked
@@ -5434,7 +5444,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageg2 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageg2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g2.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5442,7 +5452,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageg2 = true;
             matriz_inicial[1][6] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageg2 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageg2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g2.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5450,7 +5460,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageg2 = true;
             matriz_inicial[1][6] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageg2 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageg2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g2.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5458,7 +5468,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageg2 = true;
             matriz_inicial[1][6] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageg2 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageg2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g2.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5466,15 +5476,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageg2 = true;
             matriz_inicial[1][6] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageg2 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageg2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g2.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageg2 =  true;
+            hasImageg2 = true;
             matriz_inicial[1][6] = "cb";
-        } else if (lbl_reyNegro.isOpaque() && hasImageg2 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageg2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g2.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5482,7 +5492,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageg2 = true;
             matriz_inicial[1][6] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageg2 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageg2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g2.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5490,7 +5500,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageg2 = true;
             matriz_inicial[1][6] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageg2 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageg2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g2.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5498,7 +5508,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageg2 = true;
             matriz_inicial[1][6] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_g2MouseClicked
@@ -5513,7 +5523,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageg3 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageg3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g3.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5521,7 +5531,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageg3 = true;
             matriz_inicial[2][6] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageg3 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageg3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g3.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5529,7 +5539,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageg3 = true;
             matriz_inicial[2][6] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageg3 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageg3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g3.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5537,7 +5547,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageg3 = true;
             matriz_inicial[2][6] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageg3 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageg3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g3.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5545,15 +5555,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageg3 = true;
             matriz_inicial[2][6] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageg3 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageg3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g3.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageg3 =  true;
+            hasImageg3 = true;
             matriz_inicial[2][6] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageg3 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageg3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g3.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5561,7 +5571,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageg3 = true;
             matriz_inicial[2][6] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageg3 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageg3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g3.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5569,7 +5579,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageg3 = true;
             matriz_inicial[2][6] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageg3 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageg3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g3.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5577,7 +5587,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageg3 = true;
             matriz_inicial[2][6] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_g3MouseClicked
@@ -5592,7 +5602,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageg4 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageg4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g4.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5600,7 +5610,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageg4 = true;
             matriz_inicial[3][6] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageg4 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageg4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g4.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5608,7 +5618,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageg4 = true;
             matriz_inicial[3][6] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageg4 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageg4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g4.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5616,7 +5626,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageg4 = true;
             matriz_inicial[3][6] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageg4 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageg4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g4.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5624,15 +5634,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageg4 = true;
             matriz_inicial[3][6] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageg4 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageg4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g4.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageg4 =  true;
+            hasImageg4 = true;
             matriz_inicial[3][6] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageg4 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageg4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g4.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5640,7 +5650,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageg4 = true;
             matriz_inicial[3][6] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageg4 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageg4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g4.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5648,7 +5658,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageg4 = true;
             matriz_inicial[3][6] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageg4 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageg4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g4.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5656,7 +5666,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageg4 = true;
             matriz_inicial[3][6] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_g4MouseClicked
@@ -5671,7 +5681,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageg5 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageg5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g5.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5679,7 +5689,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageg5 = true;
             matriz_inicial[4][6] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageg5 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageg5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g5.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5687,7 +5697,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageg5 = true;
             matriz_inicial[4][6] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageg5 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageg5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g5.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5695,7 +5705,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageg5 = true;
             matriz_inicial[4][6] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageg5 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageg5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g5.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5703,15 +5713,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageg5 = true;
             matriz_inicial[4][6] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageg5 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageg5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g5.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageg5 =  true;
+            hasImageg5 = true;
             matriz_inicial[4][6] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageg5 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageg5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g5.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5719,7 +5729,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageg5 = true;
             matriz_inicial[4][6] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageg5 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageg5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g5.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5727,7 +5737,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageg5 = true;
             matriz_inicial[4][6] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageg5 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageg5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g5.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5735,7 +5745,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageg5 = true;
             matriz_inicial[4][6] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_g5MouseClicked
@@ -5750,7 +5760,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageg6 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageg6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g6.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5758,7 +5768,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageg6 = true;
             matriz_inicial[5][6] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageg6 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageg6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g6.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5766,7 +5776,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageg6 = true;
             matriz_inicial[5][6] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageg6 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageg6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g6.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5774,7 +5784,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageg6 = true;
             matriz_inicial[5][6] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageg6 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageg6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g6.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5782,15 +5792,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageg6 = true;
             matriz_inicial[5][6] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageg6 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageg6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g6.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageg6 =  true;
+            hasImageg6 = true;
             matriz_inicial[5][6] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageg6 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageg6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g6.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5798,7 +5808,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageg6 = true;
             matriz_inicial[5][6] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageg6 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageg6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g6.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5806,7 +5816,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageg6 = true;
             matriz_inicial[5][6] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageg6 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageg6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g6.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5814,7 +5824,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageg6 = true;
             matriz_inicial[5][6] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_g6MouseClicked
@@ -5829,7 +5839,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageg7 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageg7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g7.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5837,7 +5847,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageg7 = true;
             matriz_inicial[6][6] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageg7 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageg7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g7.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5845,7 +5855,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageg7 = true;
             matriz_inicial[6][6] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageg7 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageg7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g7.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5853,7 +5863,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageg7 = true;
             matriz_inicial[6][6] = "pn";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageg7 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageg7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g7.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5861,15 +5871,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageg7 = true;
             matriz_inicial[6][6] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageg7 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageg7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g7.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageg7 =  true;
+            hasImageg7 = true;
             matriz_inicial[6][6] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageg7 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageg7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g7.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5877,7 +5887,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageg7 = true;
             matriz_inicial[6][6] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageg7 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageg7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g7.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5885,7 +5895,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageg7 = true;
             matriz_inicial[6][6] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageg7 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageg7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g7.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5893,7 +5903,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageg7 = true;
             matriz_inicial[6][6] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_g7MouseClicked
@@ -5908,7 +5918,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageg8 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageg8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g8.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5916,7 +5926,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageg8 = true;
             matriz_inicial[7][6] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageg8 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageg8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g8.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -5924,7 +5934,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageg8 = true;
             matriz_inicial[7][6] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageg8 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageg8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g8.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -5932,7 +5942,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageg8 = true;
             matriz_inicial[7][6] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageg8 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageg8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g8.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -5940,15 +5950,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageg8 = true;
             matriz_inicial[7][6] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageg8 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageg8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g8.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageg8 =  true;
+            hasImageg8 = true;
             matriz_inicial[7][6] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageg8 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageg8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g8.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -5956,7 +5966,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageg8 = true;
             matriz_inicial[7][6] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageg8 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageg8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -5964,7 +5974,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageg8 = true;
             matriz_inicial[7][6] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageg8 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageg8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             g8.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -5972,7 +5982,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageg8 = true;
             matriz_inicial[7][6] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_g8MouseClicked
@@ -5987,7 +5997,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageh1 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageh1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h1.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -5995,7 +6005,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageh1 = true;
             matriz_inicial[0][7] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageh1 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageh1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h1.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -6003,7 +6013,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageh1 = true;
             matriz_inicial[0][7] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageh1 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageh1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h1.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -6011,7 +6021,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageh1 = true;
             matriz_inicial[0][7] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageh1 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageh1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h1.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -6019,15 +6029,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageh1 = true;
             matriz_inicial[0][7] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageh1 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageh1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h1.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageh1 =  true;
+            hasImageh1 = true;
             matriz_inicial[0][7] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageh1 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageh1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h1.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -6035,7 +6045,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageh1 = true;
             matriz_inicial[0][7] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageh1 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageh1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h1.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -6043,7 +6053,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageh1 = true;
             matriz_inicial[0][7] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageh1 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageh1 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h1.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -6051,7 +6061,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageh1 = true;
             matriz_inicial[0][7] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_h1MouseClicked
@@ -6066,7 +6076,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageh2 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageh2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h2.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -6074,7 +6084,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageh2 = true;
             matriz_inicial[1][7] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageh2 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageh2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h2.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -6082,7 +6092,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageh2 = true;
             matriz_inicial[1][7] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageh2 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageh2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h2.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -6090,7 +6100,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageh2 = true;
             matriz_inicial[1][7] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageh2 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageh2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h2.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -6098,15 +6108,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageh2 = true;
             matriz_inicial[1][7] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageh2 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageh2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h2.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageh2 =  true;
+            hasImageh2 = true;
             matriz_inicial[1][7] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageh2 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageh2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h2.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -6114,7 +6124,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageh2 = true;
             matriz_inicial[1][7] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageh2 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageh2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h2.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -6122,7 +6132,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageh2 = true;
             matriz_inicial[1][7] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageh2 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageh2 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h2.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -6130,7 +6140,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageh2 = true;
             matriz_inicial[1][7] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_h2MouseClicked
@@ -6145,7 +6155,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageh3 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageh3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h3.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -6153,7 +6163,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageh3 = true;
             matriz_inicial[2][7] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageh3 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageh3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h3.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -6161,7 +6171,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageh3 = true;
             matriz_inicial[2][7] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageh3 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageh3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h3.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -6169,7 +6179,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageh3 = true;
             matriz_inicial[2][7] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageh3 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageh3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h3.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -6177,15 +6187,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageh3 = true;
             matriz_inicial[2][7] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageh3 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageh3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h3.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageh3 =  true;
+            hasImageh3 = true;
             matriz_inicial[2][7] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageh3 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageh3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h3.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -6193,7 +6203,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageh3 = true;
             matriz_inicial[2][7] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageh3 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageh3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h3.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -6201,7 +6211,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageh3 = true;
             matriz_inicial[2][7] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageh3 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageh3 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h3.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -6209,7 +6219,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageh3 = true;
             matriz_inicial[2][7] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_h3MouseClicked
@@ -6224,7 +6234,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageh4 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageh4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h4.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -6232,7 +6242,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageh4 = true;
             matriz_inicial[3][7] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageh4 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageh4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h4.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -6240,7 +6250,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageh4 = true;
             matriz_inicial[3][7] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageh4 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageh4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h4.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -6248,7 +6258,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageh4 = true;
             matriz_inicial[3][7] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageh4 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageh4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h4.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -6256,15 +6266,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageh4 = true;
             matriz_inicial[3][7] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageh4 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageh4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h4.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageh4 =  true;
+            hasImageh4 = true;
             matriz_inicial[3][7] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageh4 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageh4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h4.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -6272,7 +6282,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageh4 = true;
             matriz_inicial[3][7] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageh4 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageh4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h4.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -6280,7 +6290,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageh4 = true;
             matriz_inicial[3][7] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageh4 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageh4 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h4.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -6288,7 +6298,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageh4 = true;
             matriz_inicial[3][7] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_h4MouseClicked
@@ -6302,7 +6312,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageh5 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageh5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h5.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -6310,7 +6320,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageh5 = true;
             matriz_inicial[4][7] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageh5 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageh5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h5.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -6318,7 +6328,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageh5 = true;
             matriz_inicial[4][7] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageh5 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageh5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h5.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -6326,7 +6336,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageh5 = true;
             matriz_inicial[4][7] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageh5 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageh5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h5.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -6334,15 +6344,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageh5 = true;
             matriz_inicial[4][7] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageh5 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageh5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h5.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageh5 =  true;
+            hasImageh5 = true;
             matriz_inicial[4][7] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageh5 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageh5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h5.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -6350,7 +6360,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageh5 = true;
             matriz_inicial[4][7] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageh5 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageh5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h5.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -6358,7 +6368,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageh5 = true;
             matriz_inicial[4][7] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageh5 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageh5 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h5.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -6366,7 +6376,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageh5 = true;
             matriz_inicial[4][7] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_h5MouseClicked
@@ -6381,7 +6391,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageh6 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageh6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h6.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -6389,7 +6399,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageh6 = true;
             matriz_inicial[5][7] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageh6 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageh6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h6.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -6397,7 +6407,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageh6 = true;
             matriz_inicial[5][7] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageh6 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageh6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h6.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -6405,7 +6415,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageh6 = true;
             matriz_inicial[5][7] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageh6 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageh6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h6.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -6413,15 +6423,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageh6 = true;
             matriz_inicial[5][7] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageh6 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageh6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h6.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageh6 =  true;
+            hasImageh6 = true;
             matriz_inicial[5][7] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageh6 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageh6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h6.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -6429,7 +6439,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageh6 = true;
             matriz_inicial[5][7] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageh6 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageh6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h6.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -6437,7 +6447,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageh6 = true;
             matriz_inicial[5][7] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageh6 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageh6 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h6.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -6445,7 +6455,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageh6 = true;
             matriz_inicial[5][7] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_h6MouseClicked
@@ -6460,7 +6470,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageh7 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageh7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h7.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -6468,7 +6478,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageh7 = true;
             matriz_inicial[6][7] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageh7 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageh7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h7.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -6476,7 +6486,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageh7 = true;
             matriz_inicial[6][7] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageh7 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageh7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h7.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -6484,7 +6494,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageh7 = true;
             matriz_inicial[6][7] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageh7 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageh7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h7.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -6492,15 +6502,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageh7 = true;
             matriz_inicial[6][7] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageh7 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageh7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h7.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageh7 =  true;
+            hasImageh7 = true;
             matriz_inicial[6][7] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageh7 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageh7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h7.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -6508,7 +6518,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageh7 = true;
             matriz_inicial[6][7] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageh7 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageh7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h7.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -6516,7 +6526,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageh7 = true;
             matriz_inicial[6][7] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageh7 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageh7 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h7.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -6524,7 +6534,7 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageh7 = true;
             matriz_inicial[6][7] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_h7MouseClicked
@@ -6539,7 +6549,7 @@ public class Main extends javax.swing.JFrame {
         lbl_reyNegro.setEnabled(true);
         lbl_peonNegro.setEnabled(true);
         lbl_reinaNegro.setEnabled(true);
-        if (lbl_caballoBlanco.isOpaque() && hasImageh8 == false ) {            
+        if (lbl_caballoBlanco.isOpaque() && hasImageh8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballoblanco.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h8.setIcon(imageIcon);
             lbl_caballoBlanco.setOpaque(false);
@@ -6547,7 +6557,7 @@ public class Main extends javax.swing.JFrame {
             cont_caballoBlanco++;
             hasImageh8 = true;
             matriz_inicial[7][7] = "cb";
-        } else if (lbl_reyBlanco.isOpaque() && hasImageh8 == false ) {
+        } else if (lbl_reyBlanco.isOpaque() && hasImageh8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reyblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h8.setIcon(imageIcon);
             lbl_reyBlanco.setOpaque(false);
@@ -6555,7 +6565,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyBlanco++;
             hasImageh8 = true;
             matriz_inicial[7][7] = "reyb";
-        } else if (lbl_peonBlanco.isOpaque() && hasImageh8 == false ) {
+        } else if (lbl_peonBlanco.isOpaque() && hasImageh8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonblancoicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h8.setIcon(imageIcon);
             lbl_peonBlanco.setOpaque(false);
@@ -6563,7 +6573,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonBlanco++;
             hasImageh8 = true;
             matriz_inicial[7][7] = "pb";
-        } else if (lbl_reinaBlanco.isOpaque()  && hasImageh8 == false ) {
+        } else if (lbl_reinaBlanco.isOpaque() && hasImageh8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinablanca.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h8.setIcon(imageIcon);
             lbl_reinaBlanco.setOpaque(false);
@@ -6571,15 +6581,15 @@ public class Main extends javax.swing.JFrame {
             cont_reinaBlanco++;
             hasImageh8 = true;
             matriz_inicial[7][7] = "reinab";
-        } else if (lbl_caballoNegro.isOpaque() && hasImageh8 == false ) {
+        } else if (lbl_caballoNegro.isOpaque() && hasImageh8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("caballonegroicono.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h8.setIcon(imageIcon);
             lbl_caballoNegro.setOpaque(false);
             lbl_caballoNegro.setBackground(Color.gray);
             cont_caballoNegro++;
-            hasImageh8 =  true;
+            hasImageh8 = true;
             matriz_inicial[7][7] = "cn";
-        } else if (lbl_reyNegro.isOpaque() && hasImageh8 == false ) {
+        } else if (lbl_reyNegro.isOpaque() && hasImageh8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reynegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h8.setIcon(imageIcon);
             lbl_reyNegro.setOpaque(false);
@@ -6587,7 +6597,7 @@ public class Main extends javax.swing.JFrame {
             cont_reyNegro++;
             hasImageh8 = true;
             matriz_inicial[7][7] = "reyn";
-        } else if (lbl_peonNegro.isOpaque() && hasImageh8 == false ) {
+        } else if (lbl_peonNegro.isOpaque() && hasImageh8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("peonnegro.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h8.setIcon(imageIcon);
             lbl_peonNegro.setOpaque(false);
@@ -6595,7 +6605,7 @@ public class Main extends javax.swing.JFrame {
             cont_peonNegro++;
             hasImageh8 = true;
             matriz_inicial[7][7] = "pn";
-        } else if (lbl_reinaNegro.isOpaque() && hasImageh8 == false ) {
+        } else if (lbl_reinaNegro.isOpaque() && hasImageh8 == false) {
             ImageIcon imageIcon = new ImageIcon(new ImageIcon("reinanegra.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT));
             h8.setIcon(imageIcon);
             lbl_reinaNegro.setOpaque(false);
@@ -6603,23 +6613,75 @@ public class Main extends javax.swing.JFrame {
             cont_reinaNegro++;
             hasImageh8 = true;
             matriz_inicial[7][7] = "reinan";
-        }else {
+        } else {
             JOptionPane.showMessageDialog(rootPane, "No se puede agregar la pieza!");
         }
     }//GEN-LAST:event_h8MouseClicked
 
     private void btn_startMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_startMouseClicked
         // TODO add your handling code here:
-      imprimir(matriz_inicial);
-    }//GEN-LAST:event_btn_startMouseClicked
-    public static void imprimir(String[][] matriz_inicial){
+        int hayonorey = 0;
+        String piezas = "";
+        imprimir(matriz_inicial);
         for (int i = 0; i < matriz_inicial.length; i++) {
-            for (int j = 0; j < matriz_inicial.length-1; j++) {
-                System.out.print("["+matriz_inicial[i][j]+"]");
+            for (int j = 0; j < matriz_inicial.length - 1; j++) {
+                if (matriz_inicial[i][j].equalsIgnoreCase("cb")) {
+                    piezas += matriz_inicial[i][j] + ",";
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("reyb")) {
+                    piezas += matriz_inicial[i][j] + ",";
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("pb")) {
+                    piezas += matriz_inicial[i][j] + ",";
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("reinab")) {
+                    piezas += matriz_inicial[i][j] + ",";
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("cn")) {
+                    piezas += matriz_inicial[i][j] + ",";
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("reyn")) {
+                    piezas += matriz_inicial[i][j] + ",";
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("pn")) {
+                    piezas += matriz_inicial[i][j] + ",";
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("reinan")) {
+                    piezas += matriz_inicial[i][j] + ",";
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("reyb")) {
+                    hayonorey++;
+                }
+                if (matriz_inicial[i][j].equalsIgnoreCase("reyn")) {
+                    hayonorey++;
+                }
+
+            }
+        }
+        if (hayonorey != 2) {
+            JOptionPane.showMessageDialog(null, "Falta uno o dos reyes");
+        } else {
+            NodoRaiz padre = new NodoRaiz(matriz_inicial, piezas);
+            Arbol raiz = new Arbol(padre);
+//            Arbol mapeo = new Arbol(raiz);
+//            mapeo.insertar(new NodoArbol(), new NodoArbol(), 0, matriz_inicial, piezas);
+//            System.out.println("La profundidad del arbol es = " + mapeo.profundidad(mapeo.raiz));
+//            System.out.println();
+//            mapeo.Mos_nivel();
+//            System.out.println();
+//            mostrarin(mapeo.raiz);
+        }
+
+    }//GEN-LAST:event_btn_startMouseClicked
+    public static void imprimir(String[][] matriz_inicial) {
+        for (int i = 0; i < matriz_inicial.length; i++) {
+            for (int j = 0; j < matriz_inicial.length - 1; j++) {
+                System.out.print("[" + matriz_inicial[i][j] + "]");
             }
             System.out.println();
         }
     }
+
     /**
      * @param args the command line arguments
      */
@@ -6831,4 +6893,5 @@ public class Main extends javax.swing.JFrame {
     boolean hasImageh7 = false;
     boolean hasImageh8 = false;
     private String[][] matriz_inicial = new String[8][8];
+
 }

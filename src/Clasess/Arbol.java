@@ -10,42 +10,41 @@ package Clasess;
  * @author jordi
  */
 public class Arbol {
+    NodoRaiz raiz;
 
-    NodoArbol raiz;
-
-    public Arbol(NodoArbol raiz) {
-        this.raiz = raiz;
+    public Arbol(NodoRaiz raizd) {
+        raiz=raizd;
     }
-
-    void insertar(NodoArbol padre, NodoArbol hijo,int n,String[][] matriz_movimiento,String pieza) {
-        NodoArbol[] p = new NodoArbol[1];//direccion de memoria
-        //Buscar(raiz, p, n);
-        if (p[0] != null) {
-            NodoArbol x = new NodoArbol(matriz_movimiento,pieza);
-            if (p[0].hijo == null) {
-                p[0].hijo = x;
+    void insertar(NodoRaiz padre, NodoRaiz hijo,int pos) {
+        ListaRaiz p = new ListaRaiz();//direccion de memoria
+        p.insert(raiz,pos);
+        //Buscar(raiz, p, padre);
+        if (p.get(0) != null) {
+            NodoRaiz x = hijo;
+            if (p.get(0).hijo == null) {
+                p.get(0).hijo = x;
             } else {
-                p[0] = p[0].hijo;
-                while (p[0].hermano != null) {
-                    p[0] = p[0].hermano;
+                p.insert(p.get(0).hijo, 0);
+                while (p.get(0).hermano != null) {
+                    p.insert(p.get(0).hermano, 0);
                 }
-                p[0].hermano = x;
+                p.get(0).hermano = x;
             }
         } else {
-            NodoArbol aux = raiz;
+            NodoRaiz aux = raiz;
             while (aux.hermano != null) {
                 aux = aux.hermano;
             }
-            NodoArbol pa = new NodoArbol(matriz_movimiento,pieza);
-            NodoArbol hi = new NodoArbol(matriz_movimiento,pieza);
+            NodoRaiz pa = new NodoRaiz(padre.getMapeo(),padre.getPiezas());
+            NodoRaiz hi = new NodoRaiz(hijo.getMapeo(),hijo.getPiezas());
             pa.hijo = hi;
             aux.hermano = pa;
         }
     }
 
-//    void Buscar(NodoArbol padre, NodoArbol[] puntero, int n) {
+//    void Buscar(Raiz padre, Raiz[] puntero, int n) {
 //        if (padre != null) {
-//            if (padre.pieza == n) {
+//            if (padre.info == n) {
 //                puntero[0] = padre;
 //                return;
 //            }
@@ -54,7 +53,7 @@ public class Arbol {
 //        }
 //    }
 
-    int profundidad(NodoArbol r) {
+    int profundidad(NodoRaiz r) {
         if (r != null) {
             int i = 1, d = 1;
             if (r.hijo == null && r.hermano == null) {
@@ -72,10 +71,10 @@ public class Arbol {
         }
     }
 
-    void Niveles(NodoArbol x, int c, int n) {
+    void Niveles(NodoRaiz x, int c, int n) {
         if (x != null) {
             if (c == n) {
-                System.out.print(x.pieza + " ");
+                x.getMapeo();
             }
             Niveles(x.hijo, c + 1, n);
             Niveles(x.hermano, c, n);
@@ -86,6 +85,22 @@ public class Arbol {
         int aux = profundidad(raiz);
         for (int i = 1; i <= aux; i++) {
             Niveles(raiz, 1, i);
+            System.out.println();
+        }
+    }
+    
+    public static void mostrarin(NodoRaiz padre) {
+        if (padre != null) {
+            mostrarin(padre.hijo);
+            imprimir_mapeo(padre.getMapeo());
+            mostrarin(padre.hermano);
+        }
+    }
+    public static void imprimir_mapeo(String[][]mapeo){
+        for (int i = 0; i < mapeo.length; i++) {
+            for (int j = 0; j < mapeo.length-1; j++) {
+                System.out.println("[ "+mapeo[i][j]+" ]");
+            }
             System.out.println();
         }
     }
